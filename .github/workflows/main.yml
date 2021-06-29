@@ -31,3 +31,15 @@ jobs:
         docker build -t codesoom-hamill .
         docker tag codesoom-hamill han95210/codesoom-hamill:${GITHUB_SHA::7}
         docker push han95210/codesoom-hamill:${GITHUB_SHA::7}
+    - name: Deploy
+      uses: appleboy/ssh-action@master
+      with:
+        host: ec2-13-125-59-129.ap-northeast-2.compute.amazonaws.com
+        username: ec2-user
+        key: ${{ secrets.PRIVATE_KEY }}
+        envs: GITHUB_SHA
+        script: |
+          docker pull han95210/codesoom-hamill:${GITHUB_SHA::7}
+          docker tag han95210/codesoom-hamill:${GITHUB_SHA::7} codesoom-hamill
+          docker stop server
+          docker run -d --rm --name server -p 80:3010 codesoom-hamill
