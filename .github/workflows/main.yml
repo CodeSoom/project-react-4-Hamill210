@@ -27,4 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Docker build
       run: |
+        docker login -u ${{ secrets.USERNAME }} -p ${{ secrets.PASSWORD }}
         docker build -t codesoom-hamill .
+        docker tag codesoom-hamill han95210/codesoom-hamill:${GITHUB_SHA::7}
+        docker push han95210/codesoom-hamill:${GITHUB_SHA::7}
