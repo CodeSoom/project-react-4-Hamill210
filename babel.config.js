@@ -10,12 +10,4 @@ module.exports = {
     ],
     '@babel/preset-react',
   ],
-  plugins: [
-    [
-      '@babel/plugin-transform-react-jsx',
-      {
-        runtime: 'automatic',
-      },
-    ],
-  ],
 };

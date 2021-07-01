@@ -1,11 +1,12 @@
-import express from 'express';
-
+const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+const port = process.env.PORT || 3001;
+const route = require('./routes/index');
 
-app.get('/hello', (req, res) => {
-  res.status(200).send('즐거운 CI/CD 시간!!!!');
-});
+app.use(bodyParser.json());
+app.use('/api', route);
 
-app.listen(3010, () => {
-  console.log('server is running');
-});
+app.listen(port, ()=>{
+  console.log(`express is running on ${port}`);
+})

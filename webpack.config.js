@@ -1,7 +1,4 @@
-const path = require('path');
-
 module.exports = {
-  entry: path.resolve(__dirname, 'src/index.jsx'),
   module: {
     rules: [
       {
@@ -10,13 +7,5 @@ module.exports = {
         use: 'babel-loader',
       },
     ],
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
-  devServer: {
-    historyApiFallback: {
-      index: 'index.html',
-    },
   },
 };

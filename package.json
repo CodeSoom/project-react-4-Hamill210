@@ -1,53 +1,69 @@
 {
-  "name": "demo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node --experimental-modules src/server",
-    "test:unit": "jest",
-    "coverage": "npm run test:unit -- --coverage",
-    "test:e2e": "codeceptjs run --steps",
-    "test": "npm run coverage && start-server-and-test start http://localhost:8080 test:e2e",
-    "lint": "eslint --ext js,jsx ."
-  },
-  "type": "module",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.14.2",
-    "@babel/preset-env": "^7.14.2",
-    "@babel/preset-react": "^7.13.13",
-    "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/react": "^11.2.7",
-    "@types/jest": "^26.0.23",
-    "babel-jest": "^26.6.3",
-    "babel-loader": "^8.2.2",
-    "codeceptjs": "^3.0.7",
-    "eslint": "^7.26.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.23.2",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "given2": "^2.1.7",
-    "jest": "^26.6.3",
-    "jest-plugin-context": "^2.9.0",
-    "puppeteer": "^9.1.1",
-    "redux-mock-store": "^1.5.4",
-    "start-server-and-test": "^1.12.2",
-    "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2"
-  },
+  "name": "soom.gg",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@reduxjs/toolkit": "^1.6.0",
+    "@testing-library/user-event": "^12.1.10",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "http-proxy-middleware": "^2.0.0",
+    "npm-run-all": "^4.1.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
     "redux": "^4.1.0",
-    "redux-thunk": "^2.3.0"
+    "web-vitals": "^1.0.1",
+    "webpack": "^4.44.0"
+  },
+  "scripts": {
+    "start": "npm-run-all --parallel start:**",
+    "start:client": "react-scripts start",
+    "start:server": "node src/server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext js,jsx ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@types/jest": "^26.0.23",
+    "babel-jest": "^27.0.6",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "jest": "^27.0.6",
+    "webpack-cli": "^4.7.2"
   }
 }
