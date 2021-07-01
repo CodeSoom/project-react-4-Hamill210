@@ -7,22 +7,23 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username:null
+      username: null,
     };
   }
 
   componentDidMount() {
     fetch('api/group')
       .then(res => res.json())
-      .then(data => this.setState({ username: data.username }));
+      .then(data => this.setState({ appName: data.appName }));
   }
 
   render() {
-    const {username} = this.state;
+    const {appName} = this.state;
+
     return (
       <div className="App">
         <header className="App-header">
-          {username ? `Hello ${username}` : 'Hello World'}
+          {appName ? `Hello ${appName}` : 'Hello World'}
         </header>
       </div>
     );
