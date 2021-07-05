@@ -15,8 +15,6 @@ describe('App', () => {
   });
 
   it('renders Search Area', () => {
-    const handleChange = jest.fn();
-
     const { queryByPlaceholderText } = renderApp();
 
     expect(queryByPlaceholderText('소환사명을 입력하세요.')).not.toBeNull();
@@ -24,7 +22,5 @@ describe('App', () => {
     fireEvent.change(queryByPlaceholderText('소환사명을 입력하세요.'), {
       target: { value: '최하누리' },
     });
-
-    expect(handleChange).toBeCalled();
   });
 });
