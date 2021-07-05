@@ -14,7 +14,7 @@ describe('App', () => {
     expect(queryByText('SOOM.GG')).not.toBeNull();
   });
 
-  it('renders Search Area', () => {
+  it('renders search box', () => {
     const { queryByPlaceholderText } = renderApp();
     const inputElement = queryByPlaceholderText('소환사명을 입력하세요.');
 
