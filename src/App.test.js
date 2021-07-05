@@ -16,10 +16,11 @@ describe('App', () => {
 
   it('renders Search Area', () => {
     const { queryByPlaceholderText } = renderApp();
+    const inputElement = queryByPlaceholderText('소환사명을 입력하세요.');
 
-    expect(queryByPlaceholderText('소환사명을 입력하세요.')).not.toBeNull();
+    expect(inputElement).not.toBeNull();
 
-    fireEvent.change(queryByPlaceholderText('소환사명을 입력하세요.'), {
+    fireEvent.change(inputElement, {
       target: { value: '최하누리' },
     });
   });
