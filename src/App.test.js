@@ -5,13 +5,17 @@ import '@testing-library/jest-dom';
 import App from './App';
 
 describe('App', () => {
+  function renderApp() {
+    return render(<App />);
+  }
+
   it('renders header', () => {
-    const { queryByText } = render(<App />);
+    const { queryByText } = renderApp();
     expect(queryByText('SOOM.GG')).not.toBeNull();
   });
 
   it('renders Search Area', () => {
-    const { queryByPlaceholderText } = render(<App />);
+    const { queryByPlaceholderText } = renderApp();
     expect(queryByPlaceholderText('소환사명을 입력하세요.')).not.toBeNull();
   });
 });
