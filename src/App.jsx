@@ -7,6 +7,14 @@ function App() {
     setUserName(value);
   };
 
+  const handleClickSearchUserInfo = () => {
+    if (userName === '') {
+      return;
+    }
+
+    setUserName('');
+  };
+
   return (
     <>
       <h2>SOOM.GG</h2>
@@ -16,6 +24,12 @@ function App() {
         value={userName}
         onChange={(event) => handleChangeText(event.target.value)}
       />
+      <button
+        type="button"
+        onClick={handleClickSearchUserInfo}
+      >
+        검색
+      </button>
     </>
   );
 }
