@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 
 import '@testing-library/jest-dom';
 
@@ -15,7 +15,16 @@ describe('App', () => {
   });
 
   it('renders Search Area', () => {
+    const handleChange = jest.fn();
+
     const { queryByPlaceholderText } = renderApp();
+
     expect(queryByPlaceholderText('소환사명을 입력하세요.')).not.toBeNull();
+
+    fireEvent.change(queryByPlaceholderText('소환사명을 입력하세요.'), {
+      target: { value: '최하누리' },
+    });
+
+    expect(handleChange).toBeCalled();
   });
 });
