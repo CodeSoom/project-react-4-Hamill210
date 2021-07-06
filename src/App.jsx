@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SearchBox from "./components/SearchBox";
 
 function App() {
   const [userName, setUserName] = useState('');
@@ -18,18 +19,11 @@ function App() {
   return (
     <>
       <h2>SOOM.GG</h2>
-      <input
-        type="text"
-        placeholder="소환사명을 입력하세요."
-        value={userName}
-        onChange={(event) => handleChangeText(event.target.value)}
+      <SearchBox
+        userName={userName}
+        onChangeText={handleChangeText}
+        onClickSearchUserInfo={handleClickSearchUserInfo}
       />
-      <button
-        type="button"
-        onClick={handleClickSearchUserInfo}
-      >
-        검색
-      </button>
     </>
   );
 }
