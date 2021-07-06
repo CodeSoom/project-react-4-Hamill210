@@ -11,11 +11,11 @@ describe('SearchBox', () => {
   function renderSearchBox() {
     return render(
       <SearchBox
-        userName={'최하누리'}
+        userName="최하누리"
         onChangeText={handleChangeText}
         onClickSearchUserInfo={handleClickSearchUserInfo}
-      />
-    )
+      />,
+    );
   }
 
   it('renders search box', () => {

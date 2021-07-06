@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import SearchBox from "./components/SearchBox";
+
+import SearchBox from './components/SearchBox';
 
 function App() {
   const [userName, setUserName] = useState('');
