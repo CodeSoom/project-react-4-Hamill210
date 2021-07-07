@@ -1,6 +1,6 @@
 import X_RIOT_TOKEN from '../config/riotKey';
 
-export async function fetchPlayerInfo(username) {
+export async function fetchSummoners(username) {
   const response = await fetch(`lol/summoner/v4/summoners/by-name/${username}`, {
     method: 'GET',
     headers: {

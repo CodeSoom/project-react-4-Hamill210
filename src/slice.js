@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchPlayerInfo } from './services/apis';
+import { fetchSummoners } from './services/api';
 
 const { actions, reducer } = createSlice({
   name: 'players',
@@ -34,7 +34,7 @@ export const {
 
 export function loadPlayerInfo(username) {
   return async (dispatch) => {
-    const summoner = await fetchPlayerInfo(username);
+    const summoner = await fetchSummoners(username);
 
     dispatch(setSummoner(summoner));
   };
