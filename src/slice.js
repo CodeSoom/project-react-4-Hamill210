@@ -32,7 +32,7 @@ export const {
   setSummoner,
 } = actions;
 
-export function loadPlayerInfo(username) {
+export function loadSummoners(username) {
   return async (dispatch) => {
     const summoner = await fetchSummoners(username);
 

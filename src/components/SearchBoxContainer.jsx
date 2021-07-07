@@ -4,7 +4,7 @@ import SearchBox from './SearchBox';
 
 import {
   setPlayerName,
-  loadPlayerInfo,
+  loadSummoners,
 } from '../slice';
 
 export default function SearchBoxContainer() {
@@ -19,7 +19,7 @@ export default function SearchBoxContainer() {
   }
 
   function handleClickSearchPlayer() {
-    dispatch(loadPlayerInfo(userName));
+    dispatch(loadSummoners(userName));
   }
 
   return (
