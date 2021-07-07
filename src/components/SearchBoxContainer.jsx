@@ -14,7 +14,7 @@ export default function SearchBoxContainer() {
     userName: state.player.userName,
   }));
 
-  function handleChangeInputValue(name) {
+  function handleChangeValue(name) {
     dispatch(setPlayerName(name));
   }
 
@@ -25,7 +25,7 @@ export default function SearchBoxContainer() {
   return (
     <SearchBox
       userName={userName}
-      onChangeInputValue={handleChangeInputValue}
+      onChangeValue={handleChangeValue}
       onClickSearchPlayer={handleClickSearchPlayer}
     />
   );

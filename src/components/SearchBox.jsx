@@ -1,7 +1,7 @@
-function SearchBox({ userName, onChangeInputValue, onClickSearchPlayer }) {
+function SearchBox({ userName, onChangeValue, onClickSearchPlayer }) {
   const handleChange = (event) => {
     const { target: { value } } = event;
-    onChangeInputValue(value);
+    onChangeValue(value);
   };
 
   return (
