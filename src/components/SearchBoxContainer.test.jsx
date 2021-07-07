@@ -23,12 +23,12 @@ describe('SearchBoxContainer', () => {
   });
 
   it('renders searchBox and searchBtn', () => {
-    const { container, queryByText } = render(
+    const { queryByPlaceholderText, queryByText } = render(
       <SearchBoxContainer />,
     );
 
-    expect(container).toHaveTextContent('소환사명을 입력하세요.');
-    expect(container).toHaveTextContent('검색');
+    expect(queryByPlaceholderText('소환사명을 입력하세요.')).not.toBeNull();
+    expect(queryByText('검색')).not.toBeNull();
 
     fireEvent.click(queryByText('검색'));
 
