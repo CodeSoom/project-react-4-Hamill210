@@ -2,8 +2,6 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import '@testing-library/jest-dom';
-
 import SearchBoxContainer from './SearchBoxContainer';
 
 jest.mock('react-redux');
