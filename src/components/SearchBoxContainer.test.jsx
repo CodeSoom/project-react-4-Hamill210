@@ -16,9 +16,9 @@ describe('SearchBoxContainer', () => {
     useDispatch.mockImplementation(() => dispatch);
 
     useSelector.mockImplementation((selector) => selector({
-      players: [
-        { id: 1, name: '최하누리' },
-      ],
+      player: {
+        userName: '',
+      },
     }));
   });
 
