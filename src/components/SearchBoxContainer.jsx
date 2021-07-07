@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import SearchBox from './SearchBox';
 
 import {
-  changePlayerName,
+  setPlayerName,
   loadPlayerInfo,
 } from '../slice';
 
@@ -15,7 +15,7 @@ export default function SearchBoxContainer() {
   }));
 
   function handleChangeInputValue(name) {
-    dispatch(changePlayerName(name));
+    dispatch(setPlayerName(name));
   }
 
   function handleClickSearchPlayer() {

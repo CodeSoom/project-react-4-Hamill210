@@ -10,7 +10,7 @@ const { actions, reducer } = createSlice({
     summoner: {},
   },
   reducers: {
-    changePlayerName(state, { payload: userName }) {
+    setPlayerName(state, { payload: userName }) {
       return {
         ...state,
         player: {
@@ -28,7 +28,7 @@ const { actions, reducer } = createSlice({
 });
 
 export const {
-  changePlayerName,
+  setPlayerName,
   setSummoner,
 } = actions;
 
