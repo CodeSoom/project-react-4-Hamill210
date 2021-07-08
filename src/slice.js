@@ -1,5 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchSummoners } from './services/api';
+import {
+  fetchSummoners,
+  fetchRanks,
+} from './services/api';
 
 const { actions, reducer } = createSlice({
   name: 'players',
@@ -8,6 +11,8 @@ const { actions, reducer } = createSlice({
       userName: '',
     },
     summoner: {},
+    soloRank: {},
+    subRank: {},
   },
   reducers: {
     setPlayerName(state, { payload: userName }) {
@@ -24,19 +29,33 @@ const { actions, reducer } = createSlice({
         summoner,
       };
     },
+    setRanks(state, { payload: ranks }) {
+      const [subRank, soloRank] = ranks;
+
+      return {
+        ...state,
+        soloRank,
+        subRank,
+      };
+    },
   },
 });
 
 export const {
   setPlayerName,
   setSummoner,
+  setRanks,
 } = actions;
 
 export function loadSummoners(username) {
   return async (dispatch) => {
     const summoner = await fetchSummoners(username);
-
     dispatch(setSummoner(summoner));
+
+    if (summoner) {
+      const ranks = await fetchRanks(summoner.id);
+      dispatch(setRanks(ranks));
+    }
   };
 }
 
