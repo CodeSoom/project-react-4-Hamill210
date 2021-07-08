@@ -3,7 +3,8 @@ import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 
 import {
-  loadSummoners, setSummoner,
+  loadSummoners,
+  setSummoner,
 } from './slice';
 
 const middlewares = [thunk];
@@ -17,6 +18,8 @@ describe('actions', () => {
   describe('loadSummoners', () => {
     store = mockStore({
       summoner: {},
+      soloRank: {},
+      subRank: {},
     });
 
     it('dispatches setSummoner', async () => {

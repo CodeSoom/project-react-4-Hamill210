@@ -1,7 +1,11 @@
 import reducer, {
   setPlayerName,
   setSummoner,
+  setRanks,
 } from './slice';
+
+import SUMMONER from '../fixtures/summoner';
+import USER_LEAGUE_INFOS from '../fixtures/ranks';
 
 describe('reducer', () => {
   context('when previous state is undefined', () => {
@@ -10,6 +14,8 @@ describe('reducer', () => {
         userName: '',
       },
       summoner: {},
+      soloRank: {},
+      subRank: {},
     };
 
     it('returns initialState', () => {
@@ -37,18 +43,24 @@ describe('reducer', () => {
       const initialState = {
         summoner: {},
       };
-      const summoner = {
-        id: 'ROmqWcUq7lVH-iIBcatiskiO9leUlsD5SL9VQXkXPFO_Nw',
-        accountId: 'EUIJaJrzXK_sB9qfTCL7eRPIAagzFh9K9esUkb2G1Vze',
-        puuid: 'MBsxsPWzxruXkjSBghzf79BermZyogtFgrLgd7QJUS5iSXfYG2ovL7NA2yiOXNZGKdmSxZxzT9WgJQ',
-        name: '최하누리',
-        profileIconId: 4574,
-        revisionDate: 1624691287000,
-        summonerLevel: 289,
-      };
-      const state = reducer(initialState, setSummoner(summoner));
+
+      const state = reducer(initialState, setSummoner(SUMMONER));
 
       expect(state.summoner.name).toEqual('최하누리');
+    });
+  });
+
+  describe('setRanks', () => {
+    it('changes rank information', () => {
+      const initialState = {
+        soloRank: {},
+        subRank: {},
+      };
+
+      const state = reducer(initialState, setRanks(USER_LEAGUE_INFOS));
+
+      expect(state.subRank.tier).toEqual(USER_LEAGUE_INFOS[0].tier);
+      expect(state.soloRank.tier).toEqual(USER_LEAGUE_INFOS[1].tier);
     });
   });
 });

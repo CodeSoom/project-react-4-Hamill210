@@ -10,6 +10,14 @@ export async function fetchSummoners(username) {
   return response.json();
 }
 
-export async function fetchXXX() {
-  //
+export async function fetchRanks(encryptedSummonerId) {
+  const response = await fetch(`lol/league/v4/entries/by-summoner/${encryptedSummonerId}`, {
+    method: 'GET',
+    headers: {
+      Origin: 'https://developer.riotgames.com',
+      'X-Riot-Token': process.env.REACT_APP_X_RIOT_TOKEN,
+    },
+  });
+
+  return response.json();
 }

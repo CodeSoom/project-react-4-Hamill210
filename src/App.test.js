@@ -16,6 +16,8 @@ describe('App', () => {
         userName: '',
       },
       summoner: {},
+      soloRank: {},
+      subRank: {},
     }));
   });
 
