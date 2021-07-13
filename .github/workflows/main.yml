@@ -42,4 +42,4 @@ jobs:
           docker pull han95210/codesoom-hamill:${GITHUB_SHA::7}
           docker tag han95210/codesoom-hamill:${GITHUB_SHA::7} codesoom-hamill
           docker stop server
-          docker run -d --rm --name server -p 80:3000 codesoom-hamill
+          docker run --env-file .env -d --rm --name server -p 80:3000 codesoom-hamill
