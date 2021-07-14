@@ -14,24 +14,26 @@ describe('PlayerInfoContainer', () => {
     useDispatch.mockImplementation(() => dispatch);
 
     useSelector.mockImplementation((selector) => selector({
-      summoner: {
-        name: '최하누리',
-        summonerLevel: '30',
+      player: {
+        summoner: {
+          name: '최하누리',
+          summonerLevel: '30',
+        },
+        soloRank: {
+          tier: '다이아몬드',
+          rank: '2',
+          leaguePoints: '75LP',
+          wins: '145',
+          losses: '132',
+        },
+        subRank: {
+          tier: '플레티넘',
+          rank: '4',
+          leaguePoints: '1LP',
+          wins: '24',
+          losses: '16',
+        },
       },
-      soloRank: {
-        tier: '다이아몬드',
-        rank: '2',
-        leaguePoints: '75LP',
-        wins: '145',
-        losses: '132',
-      },
-      subRank: {
-        tier: '플레티넘',
-        rank: '4',
-        leaguePoints: '1LP',
-        wins: '24',
-        losses: '16',
-      }
     }));
   });
 

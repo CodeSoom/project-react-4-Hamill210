@@ -1,4 +1,4 @@
-const matches = [
+const matchInfos = [
   {
     "platformId": "KR",
     "gameId": 5322616986,
@@ -201,4 +201,4 @@ const matches = [
   }
 ];
 
-export default matches;
+export default matchInfos;

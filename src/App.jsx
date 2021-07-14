@@ -8,6 +8,7 @@ function App() {
       <h2>SOOM.GG</h2>
       <SearchBoxContainer />
       <PlayerInfoContainer />
+      <br />
       <GameListContainer />
     </>
   );

@@ -2,11 +2,12 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import {
   fetchSummoners,
-  fetchRanks, fetchMatches,
+  fetchRanks, fetchMatchInfos, fetchGameInfo,
 } from '../../services/api';
 
 import {
-  setMatches,
+  setGameInfo,
+  setMatchInfos,
 } from '../games/slice';
 
 const { actions, reducer } = createSlice({
@@ -61,8 +62,12 @@ export function loadSummoners(username) {
       const ranks = await fetchRanks(summoner.id);
       dispatch(setRanks(ranks));
 
-      const matches = await fetchMatches(summoner.accountId);
-      dispatch(setMatches(matches));
+      const matchInfos = await fetchMatchInfos(summoner.accountId);
+      dispatch(setMatchInfos(matchInfos));
+
+      const fetchGameInfos = matchInfos.matches.map(({ gameId }) => fetchGameInfo(gameId));
+      const gameInfos = await Promise.all(fetchGameInfos);
+      dispatch(setGameInfo(gameInfos));
     }
   };
 }

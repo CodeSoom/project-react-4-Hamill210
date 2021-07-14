@@ -2,10 +2,13 @@ import { render } from '@testing-library/react';
 
 import GameList from './GameList';
 
+import GAME_INFOS from '../../../fixtures/gameInfos';
+
 describe('GameList', () => {
   it('renders', () => {
-    const { container } = render(
+    const { container, queryByText } = render(
       <GameList
+        gameInfos={GAME_INFOS}
       />,
     );
 
@@ -26,7 +29,7 @@ describe('GameList', () => {
     expect(container).toHaveTextContent('Returned Player')
     expect(container).toHaveTextContent('피곤한 문화인')
     expect(container).toHaveTextContent('베 2')
-    expect(container).toHaveTextContent('Airsalf')
+    expect(container).toHaveTextContent('Airsalt')
 
     expect(container).toHaveTextContent('문라딘')
     expect(container).toHaveTextContent('0975310849853211')
