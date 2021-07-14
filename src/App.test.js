@@ -13,11 +13,13 @@ describe('App', () => {
 
     useSelector.mockImplementation((selector) => selector({
       player: {
-        userName: '',
+        player: {
+          userName: '',
+        },
+        summoner: {},
+        soloRank: {},
+        subRank: {},
       },
-      summoner: {},
-      soloRank: {},
-      subRank: {},
     }));
   });
 

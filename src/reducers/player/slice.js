@@ -1,8 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
+
 import {
   fetchSummoners,
-  fetchRanks,
-} from './services/api';
+  fetchRanks, fetchMatches,
+} from '../../services/api';
+
+import {
+  setMatches,
+} from '../games/slice';
 
 const { actions, reducer } = createSlice({
   name: 'players',
@@ -55,6 +60,9 @@ export function loadSummoners(username) {
     if (summoner) {
       const ranks = await fetchRanks(summoner.id);
       dispatch(setRanks(ranks));
+
+      const matches = await fetchMatches(summoner.accountId);
+      dispatch(setMatches(matches));
     }
   };
 }

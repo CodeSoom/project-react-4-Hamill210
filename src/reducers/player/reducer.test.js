@@ -4,8 +4,8 @@ import reducer, {
   setRanks,
 } from './slice';
 
-import SUMMONER from '../fixtures/summoner';
-import USER_LEAGUE_INFOS from '../fixtures/ranks';
+import SUMMONER from '../../../fixtures/summoner';
+import USER_LEAGUE_INFOS from '../../../fixtures/ranks';
 
 describe('reducer', () => {
   context('when previous state is undefined', () => {
