@@ -15,8 +15,10 @@ describe('SearchBoxContainer', () => {
 
     useSelector.mockImplementation((selector) => selector({
       player: {
-        userName: '',
-      },
+        player: {
+          userName: '',
+        },
+      }
     }));
   });
 

@@ -21,3 +21,15 @@ export async function fetchRanks(encryptedSummonerId) {
 
   return response.json();
 }
+
+export async function fetchMatches(encryptedAccountId) {
+  const response = await fetch(`lol/match/v4/matchlists/by-account/${encryptedAccountId}`, {
+    method: 'GET',
+    headers: {
+      Origin: 'https://developer.riotgames.com',
+      'X-Riot-Token': process.env.REACT_APP_X_RIOT_TOKEN,
+    },
+  });
+
+  return response.json();
+}

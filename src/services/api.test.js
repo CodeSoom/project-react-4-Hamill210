@@ -1,10 +1,12 @@
 import {
   fetchSummoners,
   fetchRanks,
+  fetchMatches,
 } from './api';
 
 import SUMMONER from '../../fixtures/summoner';
 import RANKS from '../../fixtures/ranks';
+import MATCHES from '../../fixtures/matches'
 
 describe('api', () => {
   const mockFetch = (data) => {
@@ -34,6 +36,18 @@ describe('api', () => {
       const summoner = await fetchRanks();
 
       expect(summoner).toEqual(RANKS);
+    });
+  });
+
+  describe('fetchMatches', () => {
+    beforeEach(() => {
+      mockFetch(MATCHES);
+    });
+
+    it('returns match list', async () => {
+      const matches = await fetchMatches();
+
+      expect(matches).toEqual(MATCHES);
     });
   });
 });

@@ -5,13 +5,13 @@ import SearchBox from './SearchBox';
 import {
   setPlayerName,
   loadSummoners,
-} from '../../reducers/slice';
+} from '../../reducers/player/slice';
 
 export default function SearchBoxContainer() {
   const dispatch = useDispatch();
 
   const { userName } = useSelector((state) => ({
-    userName: state.player.userName,
+    userName: state.player.player.userName,
   }));
 
   function handleChangeValue(name) {
