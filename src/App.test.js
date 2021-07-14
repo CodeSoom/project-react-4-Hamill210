@@ -20,6 +20,10 @@ describe('App', () => {
         soloRank: {},
         subRank: {},
       },
+      games: {
+        matchInfos: [],
+        gameInfos: [],
+      },
     }));
   });
 

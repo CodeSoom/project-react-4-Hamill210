@@ -3,8 +3,8 @@ import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 
 import {
-  loadMatches,
-  setMatches
+  loadMatchInfos,
+  setMatchInfos
 } from './slice';
 
 const middlewares = [thunk];
@@ -23,11 +23,11 @@ describe('actions', () => {
 
     it('dispatches setMatches', async () => {
       const encryptedAccountId = 'y3yPqlhLAXVaWwWG6Qvd_XoKc-OYKVhMVmRnL8-jBPiS';
-      await store.dispatch(loadMatches(encryptedAccountId));
+      await store.dispatch(loadMatchInfos(encryptedAccountId));
 
       const actions = store.getActions();
 
-      expect(actions[0]).toEqual(setMatches());
+      expect(actions[0]).toEqual(setMatchInfos());
     });
   });
 });

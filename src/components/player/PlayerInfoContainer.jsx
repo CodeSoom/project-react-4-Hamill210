@@ -9,10 +9,10 @@ export default function PlayerInfoContainer() {
     soloRank,
     subRank,
   } = useSelector((state) => ({
-    name: state.summoner ? state.summoner.name : '',
-    summonerLevel: state.summoner ? state.summoner.summonerLevel : '',
-    soloRank: state.soloRank,
-    subRank: state.subRank,
+    name: state.player.summoner.name,
+    summonerLevel: state.player.summoner.summonerLevel,
+    soloRank: state.player.soloRank,
+    subRank: state.player.subRank,
   }));
 
   return (

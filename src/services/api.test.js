@@ -1,12 +1,14 @@
 import {
   fetchSummoners,
   fetchRanks,
-  fetchMatches,
+  fetchMatchInfos,
+  fetchGameInfo,
 } from './api';
 
 import SUMMONER from '../../fixtures/summoner';
 import RANKS from '../../fixtures/ranks';
-import MATCHES from '../../fixtures/matches'
+import MATCH_INFOS from '../../fixtures/matchInfos'
+import GAME_INFOS from '../../fixtures/gameInfos'
 
 describe('api', () => {
   const mockFetch = (data) => {
@@ -39,15 +41,27 @@ describe('api', () => {
     });
   });
 
-  describe('fetchMatches', () => {
+  describe('fetchMatchInfos', () => {
     beforeEach(() => {
-      mockFetch(MATCHES);
+      mockFetch(MATCH_INFOS);
     });
 
     it('returns match list', async () => {
-      const matches = await fetchMatches();
+      const matches = await fetchMatchInfos();
 
-      expect(matches).toEqual(MATCHES);
+      expect(matches).toEqual(MATCH_INFOS);
+    });
+  });
+
+  describe('fetchGameInfos', () => {
+    beforeEach(() => {
+      mockFetch(GAME_INFOS);
+    });
+
+    it('returns game list', async () => {
+      const matches = await fetchGameInfo();
+
+      expect(matches).toEqual(GAME_INFOS);
     });
   });
 });

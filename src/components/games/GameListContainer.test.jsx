@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import GameListContainer from './GameListContainer';
 
-import MATCHES from '../../../fixtures/matches'
+import MATCH_INFOS from '../../../fixtures/matchInfos'
 import GAME_INFOS from '../../../fixtures/gameInfos'
 
 jest.mock('react-redux');
@@ -17,9 +17,10 @@ describe('GameListContainer', () => {
     useDispatch.mockImplementation(() => dispatch);
 
     useSelector.mockImplementation((selector) => selector({
-      puuid: 'MBsxsPWzxruXkjSBghzf79BermZyogtFgrLgd7QJUS5iSXfYG2ovL7NA2yiOXNZGKdmSxZxzT9WgJQ',
-      matches: MATCHES,
-      gameInfos: GAME_INFOS,
+      games: {
+        matchInfos: MATCH_INFOS,
+        gameInfos: GAME_INFOS,
+      },
     }));
   });
 
@@ -45,7 +46,7 @@ describe('GameListContainer', () => {
     expect(container).toHaveTextContent('Returned Player')
     expect(container).toHaveTextContent('피곤한 문화인')
     expect(container).toHaveTextContent('베 2')
-    expect(container).toHaveTextContent('Airsalf')
+    expect(container).toHaveTextContent('Airsalt')
 
     expect(container).toHaveTextContent('문라딘')
     expect(container).toHaveTextContent('0975310849853211')

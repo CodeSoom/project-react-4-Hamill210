@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import {
-  fetchMatches,
+  fetchMatchInfos,
 } from '../../services/api';
 
 const { actions, reducer } = createSlice({
@@ -10,23 +10,30 @@ const { actions, reducer } = createSlice({
     gameInfos: [],
   },
   reducers: {
-    setMatches(state, { payload: matchInfos }) {
+    setMatchInfos(state, { payload: matchInfos }) {
       return {
         ...state,
         matchInfos,
+      };
+    },
+    setGameInfo(state, { payload: gameInfos }) {
+      return {
+        ...state,
+        gameInfos,
       };
     },
   },
 });
 
 export const {
-  setMatches,
+  setMatchInfos,
+  setGameInfo,
 } = actions;
 
-export function loadMatches(encryptedAccountId) {
+export function loadMatchInfos(encryptedAccountId) {
   return async (dispatch) => {
-    const matchInfos = await fetchMatches(encryptedAccountId);
-    dispatch(setMatches(matchInfos));
+    const matchInfos = await fetchMatchInfos(encryptedAccountId);
+    dispatch(setMatchInfos(matchInfos));
   };
 }
 
