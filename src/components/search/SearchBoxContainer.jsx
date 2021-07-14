@@ -5,7 +5,7 @@ import SearchBox from './SearchBox';
 import {
   setPlayerName,
   loadSummoners,
-} from '../slice';
+} from '../../reducers/slice';
 
 export default function SearchBoxContainer() {
   const dispatch = useDispatch();

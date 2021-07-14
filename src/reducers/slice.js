@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import {
   fetchSummoners,
   fetchRanks,
-} from './services/api';
+} from '../services/api';
 
 const { actions, reducer } = createSlice({
   name: 'players',
