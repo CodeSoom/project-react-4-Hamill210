@@ -1,7 +1,11 @@
 import QUEUES from '../../constant/queues';
-import { QUEUE_TYPE, getFormattedTimeDifference } from '../../constant';
+import {
+  QUEUE_TYPE,
+  getFormattedTimeDifference,
+  VICTORY_OR_DEFEAT,
+} from '../../constant';
 
-function GameList({ gameInfos }) {
+function GameList({ gameInfos, summonerName }) {
   if (gameInfos.length === 0) {
     return <></>;
   }
@@ -10,72 +14,82 @@ function GameList({ gameInfos }) {
 
   return (
     gameInfos.map(({
-      gameId, gameCreation, gameDuration, queueId, participantIdentities,
-    }) => (
-      <div key={gameId}>
-        <div>
-          <div>
-            <div>
-              {QUEUE_TYPE[QUEUES.filter((queue) => queue.queueId === queueId)[0].description]}
-            </div>
-            <div>
-              <span>
-                {getFormattedTimeDifference(now - (gameCreation + (gameDuration * 1000)))}
-              </span>
-            </div>
-            <div>패배</div>
-            <div>34분 11초</div>
-          </div>
-          <div>
-            <div>카밀</div>
-          </div>
-          <div>
-            <div>
-              <span>12</span>
-              {' / '}
-              <span>9</span>
-              {' / '}
-              <span>10</span>
-            </div>
-            <div>
-              <span>2.44:1</span>
-              {' 평점 '}
-            </div>
-          </div>
-          <div>
-            <div>레벨</div>
-            <div>
-              <span>181</span>
-              {' CS '}
-            </div>
-          </div>
+      gameId, gameCreation, gameDuration, queueId, teams, participants, participantIdentities,
+    }) => {
+      const participantIdOfSummoner = participantIdentities
+        .filter(({ player }) => (player.summonerName === summonerName))[0].participantId;
+      const { teamId } = participants
+        .filter((participant) => (participant.participantId === participantIdOfSummoner))[0];
+      const team = teamId === 100 ? teams[0] : teams[1];
+
+      return (
+        <div key={gameId}>
           <div>
             <div>
               <div>
-                {participantIdentities
-                  .filter(({ participantId }) => participantId < 5)
-                  .map(({ participantId, player: { summonerName } }) => (
-                    <div key={participantId}>
-                      <a href="https://www.codesoom.com/">{summonerName}</a>
-                    </div>
-                  ))}
+                {QUEUE_TYPE[QUEUES.filter((queue) => queue.queueId === queueId)[0].description]}
+              </div>
+              <div>
+                <span>
+                  {getFormattedTimeDifference(now - (gameCreation + (gameDuration * 1000)))}
+                </span>
+              </div>
+              <div>
+                {VICTORY_OR_DEFEAT[team.win]}
+              </div>
+              <div>34분 11초</div>
+            </div>
+            <div>
+              <div>카밀</div>
+            </div>
+            <div>
+              <div>
+                <span>12</span>
+                {' / '}
+                <span>9</span>
+                {' / '}
+                <span>10</span>
+              </div>
+              <div>
+                <span>2.44:1</span>
+                {' 평점 '}
+              </div>
+            </div>
+            <div>
+              <div>레벨</div>
+              <div>
+                <span>181</span>
+                {' CS '}
               </div>
             </div>
             <div>
               <div>
-                {participantIdentities
-                  .filter(({ participantId }) => participantId >= 5)
-                  .map(({ participantId, player: { summonerName } }) => (
-                    <div key={participantId}>
-                      <a href="https://www.codesoom.com/">{summonerName}</a>
-                    </div>
-                  ))}
+                <div>
+                  {participantIdentities
+                    .filter(({ participantId }) => participantId < 5)
+                    .map(({ participantId, player }) => (
+                      <div key={participantId}>
+                        <a href="https://www.codesoom.com/">{player.summonerName}</a>
+                      </div>
+                    ))}
+                </div>
+              </div>
+              <div>
+                <div>
+                  {participantIdentities
+                    .filter(({ participantId }) => participantId >= 5)
+                    .map(({ participantId, player }) => (
+                      <div key={participantId}>
+                        <a href="https://www.codesoom.com/">{player.summonerName}</a>
+                      </div>
+                    ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    )));
+      );
+    }));
 }
 
 export default GameList;
