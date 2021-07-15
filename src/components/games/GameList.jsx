@@ -18,10 +18,11 @@ function GameList({ gameInfos, summonerName }) {
     }) => {
       const participantIdOfSummoner = participantIdentities
         .filter(({ player }) => (player.summonerName === summonerName))[0].participantId;
-      const { teamId } = participants
+      const participantOfSummoner = participants
         .filter((participant) => (participant.participantId === participantIdOfSummoner))[0];
-      const team = teamId === 100 ? teams[0] : teams[1];
+      const team = participantOfSummoner.teamId === 100 ? teams[0] : teams[1];
 
+      const { kills, deaths, assists } = participantOfSummoner.stats;
       return (
         <div key={gameId}>
           <div>
@@ -44,14 +45,17 @@ function GameList({ gameInfos, summonerName }) {
             </div>
             <div>
               <div>
-                <span>12</span>
+                <span>{kills}</span>
                 {' / '}
-                <span>9</span>
+                <span>{deaths}</span>
                 {' / '}
-                <span>10</span>
+                <span>{assists}</span>
               </div>
               <div>
-                <span>2.44:1</span>
+                <span>
+                  {((kills + assists) / deaths).toFixed(2)}
+                  :1
+                </span>
                 {' 평점 '}
               </div>
             </div>
