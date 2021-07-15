@@ -22,7 +22,10 @@ function GameList({ gameInfos, summonerName }) {
         .filter((participant) => (participant.participantId === participantIdOfSummoner))[0];
       const team = participantOfSummoner.teamId === 100 ? teams[0] : teams[1];
 
-      const { kills, deaths, assists } = participantOfSummoner.stats;
+      const {
+        kills, deaths, assists, champLevel,
+        totalMinionsKilled, neutralMinionsKilled,
+      } = participantOfSummoner.stats;
       return (
         <div key={gameId}>
           <div>
@@ -60,9 +63,16 @@ function GameList({ gameInfos, summonerName }) {
               </div>
             </div>
             <div>
-              <div>레벨</div>
               <div>
-                <span>181</span>
+                레벨
+                {' '}
+                {champLevel}
+              </div>
+              <div>
+                <span>
+                  {totalMinionsKilled + neutralMinionsKilled}
+                  {' '}
+                </span>
                 {' CS '}
               </div>
             </div>
