@@ -1,16 +1,27 @@
+import QUEUES from '../../constant/queues';
+import { QUEUE_TYPE, getFormattedTimeDifference } from '../../constant';
+
 function GameList({ gameInfos }) {
   if (gameInfos.length === 0) {
     return <></>;
   }
 
+  const now = new Date().getTime();
+
   return (
-    gameInfos.map(({ gameId, participantIdentities }) => (
+    gameInfos.map(({
+      gameId, gameCreation, gameDuration, queueId, participantIdentities,
+    }) => (
       <div key={gameId}>
         <div>
           <div>
-            <div>솔랭</div>
             <div>
-              <span>21시간 전</span>
+              {QUEUE_TYPE[QUEUES.filter((queue) => queue.queueId === queueId)[0].description]}
+            </div>
+            <div>
+              <span>
+                {getFormattedTimeDifference(now - (gameCreation + (gameDuration * 1000)))}
+              </span>
             </div>
             <div>패배</div>
             <div>34분 11초</div>
