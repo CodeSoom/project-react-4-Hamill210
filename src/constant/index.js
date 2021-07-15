@@ -23,3 +23,8 @@ export const getFormattedTimeDifference = (timeDiff) => {
 
   return result;
 };
+
+export const VICTORY_OR_DEFEAT = {
+  Win: '승리',
+  Fail: '패배',
+};
