@@ -27,23 +27,27 @@ function PlayerInfo({
       <div>
         솔로랭크
         {' : '}
-        {`${soloRank.tier} ${soloRank.rank} ${soloRank.leaguePoints}`}
+        {soloRank ? `${soloRank.tier} ${soloRank.rank} ${soloRank.leaguePoints}` : 'Unranked'}
       </div>
-      <div>
-        전적
-        {' : '}
-        {`${soloRank.wins}승 ${soloRank.losses}패`}
-      </div>
+      {soloRank && (
+        <div>
+          전적
+          {' : '}
+          {soloRank ? `${soloRank.wins}승 ${soloRank.losses}패` : ''}
+        </div>
+      )}
       <div>
         자유랭크
         {' : '}
-        {`${subRank.tier} ${subRank.rank} ${subRank.leaguePoints}`}
+        {subRank ? `${subRank.tier} ${subRank.rank} ${subRank.leaguePoints}` : 'Unranked'}
       </div>
-      <div>
-        전적
-        {' : '}
-        {`${subRank.wins}승 ${subRank.losses}패`}
-      </div>
+      {subRank && (
+        <div>
+          전적
+          {' : '}
+          {`${subRank.wins}승 ${subRank.losses}패`}
+        </div>
+      )}
     </>
   );
 }
