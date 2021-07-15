@@ -1,14 +1,19 @@
+import QUEUES from '../../constant/queues';
+import QUEUE_TYPE from '../../constant';
+
 function GameList({ gameInfos }) {
   if (gameInfos.length === 0) {
     return <></>;
   }
 
   return (
-    gameInfos.map(({ gameId, participantIdentities }) => (
+    gameInfos.map(({ gameId, queueId, participantIdentities }) => (
       <div key={gameId}>
         <div>
           <div>
-            <div>솔랭</div>
+            <div>
+              {QUEUE_TYPE[QUEUES.filter((queue) => queue.queueId === queueId)[0].description]}
+            </div>
             <div>
               <span>21시간 전</span>
             </div>

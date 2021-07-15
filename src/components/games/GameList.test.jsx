@@ -6,7 +6,7 @@ import GAME_INFOS from '../../../fixtures/gameInfos';
 
 describe('GameList', () => {
   it('renders', () => {
-    const { container, queryByText } = render(
+    const { container } = render(
       <GameList
         gameInfos={GAME_INFOS}
       />,
