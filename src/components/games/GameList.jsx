@@ -16,6 +16,9 @@ function GameList({ gameInfos, summonerName }) {
     gameInfos.map(({
       gameId, gameCreation, gameDuration, queueId, teams, participants, participantIdentities,
     }) => {
+      const gameTime = gameDuration * 1000;
+      const gamePlayTime = `${new Date(gameTime).getMinutes()}분 ${new Date(gameTime).getSeconds()}초`;
+
       const participantIdOfSummoner = participantIdentities
         .filter(({ player }) => (player.summonerName === summonerName))[0].participantId;
       const participantOfSummoner = participants
@@ -26,6 +29,9 @@ function GameList({ gameInfos, summonerName }) {
         kills, deaths, assists, champLevel,
         totalMinionsKilled, neutralMinionsKilled,
       } = participantOfSummoner.stats;
+
+      const totalMinions = totalMinionsKilled + neutralMinionsKilled;
+
       return (
         <div key={gameId}>
           <div>
@@ -35,13 +41,13 @@ function GameList({ gameInfos, summonerName }) {
               </div>
               <div>
                 <span>
-                  {getFormattedTimeDifference(now - (gameCreation + (gameDuration * 1000)))}
+                  {getFormattedTimeDifference(now - (gameCreation + gameTime))}
                 </span>
               </div>
               <div>
                 {VICTORY_OR_DEFEAT[team.win]}
               </div>
-              <div>34분 11초</div>
+              <div>{gamePlayTime}</div>
             </div>
             <div>
               <div>카밀</div>
@@ -70,8 +76,9 @@ function GameList({ gameInfos, summonerName }) {
               </div>
               <div>
                 <span>
-                  {totalMinionsKilled + neutralMinionsKilled}
+                  {totalMinions}
                   {' '}
+                  {`(${((totalMinions) / new Date(gameTime).getMinutes()).toFixed(1)})`}
                 </span>
                 {' CS '}
               </div>
