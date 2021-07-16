@@ -15,8 +15,12 @@ const ProfileIconBox = styled.div({
   display: 'inline-flex',
 });
 
+const ProfileIcon = styled.div({
+  display: 'inline-flex',
+});
+
 const IconImage = styled.img({
-  height: '100px',
+  height: '120px',
   borderRadius: '15px',
 });
 
@@ -31,9 +35,55 @@ const UserName = styled.h1({
   textAlign: 'left',
 });
 
+const RankIconBox = styled.div({
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr',
+});
+
+const RankBox = styled.div({
+  display: 'inline-flex',
+  margin: 'auto',
+});
+
+const RankImage = styled.img({
+  height: '120px',
+});
+
+const RankDescriptionWrap = styled.div({
+  alignSelf: 'center',
+  textAlign: 'center',
+});
+
+const RankDescription = styled.div({
+  display: 'grid',
+});
+
+const RankTitle = styled.span({
+  fontSize: '0.8em',
+  marginBottom: '3px',
+  fontWeight: '500',
+  color: 'rgb(100, 100, 100)',
+});
+
+const RankTier = styled.span({
+  color: '#1f8ecd',
+  fontSize: '1.2em',
+  fontWeight: '900',
+});
+
+const RankPoint = styled.span({
+  color: '#555e5e',
+  fontWeight: 'bold',
+});
+
+const RankWinLose = styled.span({
+  fontSize: '0.8em',
+  fontWeight: '500',
+  color: 'rgb(100, 100, 100)',
+});
+
 function PlayerInfo({
   name,
-  summonerLevel,
   soloRank,
   subRank,
 }) {
@@ -46,44 +96,39 @@ function PlayerInfo({
   return (
     <UserProfileContainer>
       <ProfileIconBox>
-        <div>
+        <ProfileIcon>
           <IconImage src="https://ddragon.leagueoflegends.com/cdn/11.13.1/img/profileicon/4574.png" alt="User Profile Icon" />
-        </div>
+        </ProfileIcon>
         <UserNameBox>
           <UserName>
             {name}
           </UserName>
         </UserNameBox>
       </ProfileIconBox>
-      <div>
-        레벨
-        {' : '}
-        {summonerLevel}
-      </div>
-      <div>
-        솔로랭크
-        {' : '}
-        {soloRank ? `${soloRank.tier} ${soloRank.rank} ${soloRank.leaguePoints}` : 'Unranked'}
-      </div>
-      {soloRank && (
-        <div>
-          전적
-          {' : '}
-          {soloRank ? `${soloRank.wins}승 ${soloRank.losses}패` : ''}
-        </div>
-      )}
-      <div>
-        자유랭크
-        {' : '}
-        {subRank ? `${subRank.tier} ${subRank.rank} ${subRank.leaguePoints}` : 'Unranked'}
-      </div>
-      {subRank && (
-        <div>
-          전적
-          {' : '}
-          {`${subRank.wins}승 ${subRank.losses}패`}
-        </div>
-      )}
+      <RankIconBox>
+        <RankBox>
+          <RankImage src="https://lolog.me/images/icon/DIAMOND.png" alt="DIAMOND" />
+          <RankDescriptionWrap>
+            <RankDescription>
+              <RankTitle>솔로랭크</RankTitle>
+              <RankTier>{soloRank ? `${soloRank.tier} ${soloRank.rank}` : 'Unranked'}</RankTier>
+              <RankPoint>{soloRank ? `${soloRank.leaguePoints} LP` : ''}</RankPoint>
+              <RankWinLose>{soloRank ? `${soloRank.wins}승 ${soloRank.losses}패` : ''}</RankWinLose>
+            </RankDescription>
+          </RankDescriptionWrap>
+        </RankBox>
+        <RankBox>
+          <RankImage src="https://lolog.me/images/icon/DIAMOND.png" alt="DIAMOND" />
+          <RankDescriptionWrap>
+            <RankDescription>
+              <RankTitle>자유랭크</RankTitle>
+              <RankTier>{subRank ? `${subRank.tier} ${subRank.rank}` : 'Unranked'}</RankTier>
+              <RankPoint>{subRank ? `${subRank.leaguePoints} LP` : ''}</RankPoint>
+              <RankWinLose>{`${subRank.wins}승 ${subRank.losses}패`}</RankWinLose>
+            </RankDescription>
+          </RankDescriptionWrap>
+        </RankBox>
+      </RankIconBox>
     </UserProfileContainer>
   );
 }
