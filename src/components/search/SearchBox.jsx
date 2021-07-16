@@ -1,3 +1,13 @@
+import styled from '@emotion/styled';
+
+const SearchContainer = styled.div({
+  display: 'grid',
+  gridTemplateColumns: 'auto 50px',
+  position: 'relative',
+  height: '30px',
+  borderRadius: '4px',
+});
+
 function SearchBox({ userName, onChangeValue, onClickSearchPlayer }) {
   const handleChange = (event) => {
     const { target: { value } } = event;
@@ -5,7 +15,7 @@ function SearchBox({ userName, onChangeValue, onClickSearchPlayer }) {
   };
 
   return (
-    <>
+    <SearchContainer>
       <input
         type="text"
         placeholder="소환사명을 입력하세요."
@@ -18,7 +28,7 @@ function SearchBox({ userName, onChangeValue, onClickSearchPlayer }) {
       >
         검색
       </button>
-    </>
+    </SearchContainer>
   );
 }
 
