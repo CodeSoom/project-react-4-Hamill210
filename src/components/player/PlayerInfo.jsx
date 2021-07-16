@@ -1,4 +1,15 @@
 import { memo } from 'react';
+import styled from '@emotion/styled';
+
+const UserProfileContainer = styled.div({
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr',
+  padding: '30px',
+  margin: '20px 0px',
+  backgroundColor: 'whitesmoke',
+  border: '1px solid rgb(222, 222, 222)',
+  borderRadius: '10px',
+});
 
 function PlayerInfo({
   name,
@@ -13,7 +24,7 @@ function PlayerInfo({
   }
 
   return (
-    <>
+    <UserProfileContainer>
       <div>
         소환사명
         {' : '}
@@ -48,7 +59,7 @@ function PlayerInfo({
           {`${subRank.wins}승 ${subRank.losses}패`}
         </div>
       )}
-    </>
+    </UserProfileContainer>
   );
 }
 
