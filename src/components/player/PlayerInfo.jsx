@@ -11,6 +11,26 @@ const UserProfileContainer = styled.div({
   borderRadius: '10px',
 });
 
+const ProfileIconBox = styled.div({
+  display: 'inline-flex',
+});
+
+const IconImage = styled.img({
+  height: '100px',
+  borderRadius: '15px',
+});
+
+const UserNameBox = styled.div({
+  display: 'grid',
+  gridTemplateRows: '60px 60px',
+  alignItems: 'center',
+  marginLeft: '10px',
+});
+
+const UserName = styled.h1({
+  textAlign: 'left',
+});
+
 function PlayerInfo({
   name,
   summonerLevel,
@@ -25,11 +45,16 @@ function PlayerInfo({
 
   return (
     <UserProfileContainer>
-      <div>
-        소환사명
-        {' : '}
-        {name}
-      </div>
+      <ProfileIconBox>
+        <div>
+          <IconImage src="https://ddragon.leagueoflegends.com/cdn/11.13.1/img/profileicon/4574.png" alt="User Profile Icon" />
+        </div>
+        <UserNameBox>
+          <UserName>
+            {name}
+          </UserName>
+        </UserNameBox>
+      </ProfileIconBox>
       <div>
         레벨
         {' : '}
