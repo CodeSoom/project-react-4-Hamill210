@@ -130,7 +130,7 @@ function PlayerInfo({
           )}
           <RankDescriptionWrap>
             <RankDescription>
-              <RankTitle>자유랭크</RankTitle>
+              <RankTitle>자유 5:5 랭크</RankTitle>
               <RankTier>{subRank ? `${subRank.tier} ${subRank.rank}` : 'Unranked'}</RankTier>
               <RankPoint>{subRank ? `${subRank.leaguePoints} LP` : ''}</RankPoint>
               <RankWinLose>{`${subRank.wins}승 ${subRank.losses}패`}</RankWinLose>

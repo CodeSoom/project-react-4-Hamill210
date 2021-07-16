@@ -40,7 +40,7 @@ describe('PlayerInfo', () => {
     expect(container).toHaveTextContent('75 LP');
     expect(container).toHaveTextContent('145승 132패');
 
-    expect(container).toHaveTextContent('자유랭크');
+    expect(container).toHaveTextContent('자유 5:5 랭크');
     expect(container).toHaveTextContent('플레티넘 4');
     expect(container).toHaveTextContent('1 LP');
     expect(container).toHaveTextContent('24승 16패');
