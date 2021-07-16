@@ -3,7 +3,10 @@ import {
   QUEUE_TYPE,
   getFormattedTimeDifference,
   VICTORY_OR_DEFEAT,
+  SELECTED_TEAM,
 } from '../../constant';
+
+import Player from './Player';
 
 function GameList({ gameInfos, summonerName }) {
   if (gameInfos.length === 0) {
@@ -23,7 +26,7 @@ function GameList({ gameInfos, summonerName }) {
         .filter(({ player }) => (player.summonerName === summonerName))[0].participantId;
       const participantOfSummoner = participants
         .filter((participant) => (participant.participantId === participantIdOfSummoner))[0];
-      const team = participantOfSummoner.teamId === 100 ? teams[0] : teams[1];
+      const team = teams[SELECTED_TEAM[participantOfSummoner.teamId]];
 
       const {
         kills, deaths, assists, champLevel,
@@ -85,26 +88,16 @@ function GameList({ gameInfos, summonerName }) {
             </div>
             <div>
               <div>
-                <div>
-                  {participantIdentities
-                    .filter(({ participantId }) => participantId < 5)
-                    .map(({ participantId, player }) => (
-                      <div key={participantId}>
-                        <a href="https://www.codesoom.com/">{player.summonerName}</a>
-                      </div>
-                    ))}
-                </div>
+                <Player
+                  participantIdentities={participantIdentities}
+                  blueTeam
+                />
               </div>
               <div>
-                <div>
-                  {participantIdentities
-                    .filter(({ participantId }) => participantId >= 5)
-                    .map(({ participantId, player }) => (
-                      <div key={participantId}>
-                        <a href="https://www.codesoom.com/">{player.summonerName}</a>
-                      </div>
-                    ))}
-                </div>
+                <Player
+                  participantIdentities={participantIdentities}
+                  blueTeam={false}
+                />
               </div>
             </div>
           </div>
