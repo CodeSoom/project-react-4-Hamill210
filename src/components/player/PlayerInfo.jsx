@@ -6,9 +6,9 @@ const UserProfileContainer = styled.div({
   gridTemplateColumns: '1fr 1fr',
   padding: '30px',
   margin: '20px 0px',
-  backgroundColor: 'whitesmoke',
   border: '1px solid rgb(222, 222, 222)',
   borderRadius: '10px',
+  backgroundColor: 'whitesmoke',
 });
 
 const ProfileIconBox = styled.div({
@@ -27,8 +27,8 @@ const IconImage = styled.img({
 const UserNameBox = styled.div({
   display: 'grid',
   gridTemplateRows: '60px 60px',
-  alignItems: 'center',
   marginLeft: '10px',
+  alignItems: 'center',
 });
 
 const UserName = styled.h1({
@@ -59,10 +59,10 @@ const RankDescription = styled.div({
 });
 
 const RankTitle = styled.span({
-  fontSize: '0.8em',
   marginBottom: '3px',
-  fontWeight: '500',
   color: 'rgb(100, 100, 100)',
+  fontSize: '0.8em',
+  fontWeight: '500',
 });
 
 const RankTier = styled.span({
@@ -77,9 +77,9 @@ const RankPoint = styled.span({
 });
 
 const RankWinLose = styled.span({
+  color: 'rgb(100, 100, 100)',
   fontSize: '0.8em',
   fontWeight: '500',
-  color: 'rgb(100, 100, 100)',
 });
 
 function PlayerInfo({
