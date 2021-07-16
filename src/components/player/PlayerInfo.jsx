@@ -83,10 +83,12 @@ const RankWinLose = styled.span({
 });
 
 function PlayerInfo({
-  name,
+  summoner,
   soloRank,
   subRank,
 }) {
+  const { name, profileIconId } = summoner;
+
   if (!name) {
     return (
       <p>소환사명을 검색해주세요.</p>
@@ -97,7 +99,10 @@ function PlayerInfo({
     <UserProfileContainer>
       <ProfileIconBox>
         <ProfileIcon>
-          <IconImage src="https://ddragon.leagueoflegends.com/cdn/11.13.1/img/profileicon/4574.png" alt="User Profile Icon" />
+          <IconImage
+            src={`https://ddragon.leagueoflegends.com/cdn/11.14.1/img/profileicon/${profileIconId}.png`}
+            alt="User Profile Icon"
+          />
         </ProfileIcon>
         <UserNameBox>
           <UserName>
@@ -107,7 +112,9 @@ function PlayerInfo({
       </ProfileIconBox>
       <RankIconBox>
         <RankBox>
-          <RankImage src="https://lolog.me/images/icon/DIAMOND.png" alt="DIAMOND" />
+          {soloRank && (
+            <RankImage src={`/images/ranked-emblems/${soloRank.tier}.png`} alt={soloRank.tier} />
+          )}
           <RankDescriptionWrap>
             <RankDescription>
               <RankTitle>솔로랭크</RankTitle>
@@ -118,7 +125,9 @@ function PlayerInfo({
           </RankDescriptionWrap>
         </RankBox>
         <RankBox>
-          <RankImage src="https://lolog.me/images/icon/DIAMOND.png" alt="DIAMOND" />
+          {subRank && (
+            <RankImage src={`/images/ranked-emblems/${subRank.tier}.png`} alt={subRank.tier} />
+          )}
           <RankDescriptionWrap>
             <RankDescription>
               <RankTitle>자유랭크</RankTitle>

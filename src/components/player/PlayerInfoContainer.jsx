@@ -4,21 +4,18 @@ import PlayerInfo from './PlayerInfo';
 
 export default function PlayerInfoContainer() {
   const {
-    name,
-    summonerLevel,
+    summoner,
     soloRank,
     subRank,
   } = useSelector((state) => ({
-    name: state.player.summoner.name,
-    summonerLevel: state.player.summoner.summonerLevel,
+    summoner: state.player.summoner,
     soloRank: state.player.soloRank,
     subRank: state.player.subRank,
   }));
 
   return (
     <PlayerInfo
-      name={name}
-      summonerLevel={summonerLevel}
+      summoner={summoner}
       soloRank={soloRank}
       subRank={subRank}
     />
