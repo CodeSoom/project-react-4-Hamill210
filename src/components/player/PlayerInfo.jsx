@@ -1,11 +1,94 @@
 import { memo } from 'react';
+import styled from '@emotion/styled';
+
+const UserProfileContainer = styled.div({
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr',
+  padding: '30px',
+  margin: '20px 0px',
+  border: '1px solid rgb(222, 222, 222)',
+  borderRadius: '10px',
+  backgroundColor: 'whitesmoke',
+});
+
+const ProfileIconBox = styled.div({
+  display: 'inline-flex',
+});
+
+const ProfileIcon = styled.div({
+  display: 'inline-flex',
+});
+
+const IconImage = styled.img({
+  height: '120px',
+  borderRadius: '15px',
+});
+
+const UserNameBox = styled.div({
+  display: 'grid',
+  gridTemplateRows: '60px 60px',
+  marginLeft: '10px',
+  alignItems: 'center',
+});
+
+const UserName = styled.h1({
+  textAlign: 'left',
+});
+
+const RankIconBox = styled.div({
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr',
+});
+
+const RankBox = styled.div({
+  display: 'inline-flex',
+  margin: 'auto',
+});
+
+const RankImage = styled.img({
+  height: '120px',
+});
+
+const RankDescriptionWrap = styled.div({
+  alignSelf: 'center',
+  textAlign: 'center',
+});
+
+const RankDescription = styled.div({
+  display: 'grid',
+});
+
+const RankTitle = styled.span({
+  marginBottom: '3px',
+  color: 'rgb(100, 100, 100)',
+  fontSize: '0.8em',
+  fontWeight: '500',
+});
+
+const RankTier = styled.span({
+  color: '#1f8ecd',
+  fontSize: '1.2em',
+  fontWeight: '900',
+});
+
+const RankPoint = styled.span({
+  color: '#555e5e',
+  fontWeight: 'bold',
+});
+
+const RankWinLose = styled.span({
+  color: 'rgb(100, 100, 100)',
+  fontSize: '0.8em',
+  fontWeight: '500',
+});
 
 function PlayerInfo({
-  name,
-  summonerLevel,
+  summoner,
   soloRank,
   subRank,
 }) {
+  const { name, profileIconId } = summoner;
+
   if (!name) {
     return (
       <p>소환사명을 검색해주세요.</p>
@@ -13,42 +96,49 @@ function PlayerInfo({
   }
 
   return (
-    <>
-      <div>
-        소환사명
-        {' : '}
-        {name}
-      </div>
-      <div>
-        레벨
-        {' : '}
-        {summonerLevel}
-      </div>
-      <div>
-        솔로랭크
-        {' : '}
-        {soloRank ? `${soloRank.tier} ${soloRank.rank} ${soloRank.leaguePoints}` : 'Unranked'}
-      </div>
-      {soloRank && (
-        <div>
-          전적
-          {' : '}
-          {soloRank ? `${soloRank.wins}승 ${soloRank.losses}패` : ''}
-        </div>
-      )}
-      <div>
-        자유랭크
-        {' : '}
-        {subRank ? `${subRank.tier} ${subRank.rank} ${subRank.leaguePoints}` : 'Unranked'}
-      </div>
-      {subRank && (
-        <div>
-          전적
-          {' : '}
-          {`${subRank.wins}승 ${subRank.losses}패`}
-        </div>
-      )}
-    </>
+    <UserProfileContainer>
+      <ProfileIconBox>
+        <ProfileIcon>
+          <IconImage
+            src={`https://ddragon.leagueoflegends.com/cdn/11.14.1/img/profileicon/${profileIconId}.png`}
+            alt="User Profile Icon"
+          />
+        </ProfileIcon>
+        <UserNameBox>
+          <UserName>
+            {name}
+          </UserName>
+        </UserNameBox>
+      </ProfileIconBox>
+      <RankIconBox>
+        <RankBox>
+          {soloRank && (
+            <RankImage src={`/images/ranked-emblems/${soloRank.tier}.png`} alt={soloRank.tier} />
+          )}
+          <RankDescriptionWrap>
+            <RankDescription>
+              <RankTitle>솔로랭크</RankTitle>
+              <RankTier>{soloRank ? `${soloRank.tier} ${soloRank.rank}` : 'Unranked'}</RankTier>
+              <RankPoint>{soloRank ? `${soloRank.leaguePoints} LP` : ''}</RankPoint>
+              <RankWinLose>{soloRank ? `${soloRank.wins}승 ${soloRank.losses}패` : ''}</RankWinLose>
+            </RankDescription>
+          </RankDescriptionWrap>
+        </RankBox>
+        <RankBox>
+          {subRank && (
+            <RankImage src={`/images/ranked-emblems/${subRank.tier}.png`} alt={subRank.tier} />
+          )}
+          <RankDescriptionWrap>
+            <RankDescription>
+              <RankTitle>자유랭크</RankTitle>
+              <RankTier>{subRank ? `${subRank.tier} ${subRank.rank}` : 'Unranked'}</RankTier>
+              <RankPoint>{subRank ? `${subRank.leaguePoints} LP` : ''}</RankPoint>
+              <RankWinLose>{`${subRank.wins}승 ${subRank.losses}패`}</RankWinLose>
+            </RankDescription>
+          </RankDescriptionWrap>
+        </RankBox>
+      </RankIconBox>
+    </UserProfileContainer>
   );
 }
 
