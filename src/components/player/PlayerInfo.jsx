@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import styled from '@emotion/styled';
+import PlayerRankInfo from './PlayerRankInfo';
 
 const UserProfileContainer = styled.div({
   display: 'grid',
@@ -40,48 +41,6 @@ const RankIconBox = styled.div({
   gridTemplateColumns: '1fr 1fr',
 });
 
-const RankBox = styled.div({
-  display: 'inline-flex',
-  margin: 'auto',
-});
-
-const RankImage = styled.img({
-  height: '120px',
-});
-
-const RankDescriptionWrap = styled.div({
-  alignSelf: 'center',
-  textAlign: 'center',
-});
-
-const RankDescription = styled.div({
-  display: 'grid',
-});
-
-const RankTitle = styled.span({
-  marginBottom: '3px',
-  color: 'rgb(100, 100, 100)',
-  fontSize: '0.8em',
-  fontWeight: '500',
-});
-
-const RankTier = styled.span({
-  color: '#1f8ecd',
-  fontSize: '1.2em',
-  fontWeight: '900',
-});
-
-const RankPoint = styled.span({
-  color: '#555e5e',
-  fontWeight: 'bold',
-});
-
-const RankWinLose = styled.span({
-  color: 'rgb(100, 100, 100)',
-  fontSize: '0.8em',
-  fontWeight: '500',
-});
-
 function PlayerInfo({
   summoner,
   soloRank,
@@ -111,32 +70,14 @@ function PlayerInfo({
         </UserNameBox>
       </ProfileIconBox>
       <RankIconBox>
-        <RankBox>
-          {soloRank && (
-            <RankImage src={`/images/ranked-emblems/${soloRank.tier}.png`} alt={soloRank.tier} />
-          )}
-          <RankDescriptionWrap>
-            <RankDescription>
-              <RankTitle>솔로랭크</RankTitle>
-              <RankTier>{soloRank ? `${soloRank.tier} ${soloRank.rank}` : 'Unranked'}</RankTier>
-              <RankPoint>{soloRank ? `${soloRank.leaguePoints} LP` : ''}</RankPoint>
-              <RankWinLose>{soloRank ? `${soloRank.wins}승 ${soloRank.losses}패` : ''}</RankWinLose>
-            </RankDescription>
-          </RankDescriptionWrap>
-        </RankBox>
-        <RankBox>
-          {subRank && (
-            <RankImage src={`/images/ranked-emblems/${subRank.tier}.png`} alt={subRank.tier} />
-          )}
-          <RankDescriptionWrap>
-            <RankDescription>
-              <RankTitle>자유랭크</RankTitle>
-              <RankTier>{subRank ? `${subRank.tier} ${subRank.rank}` : 'Unranked'}</RankTier>
-              <RankPoint>{subRank ? `${subRank.leaguePoints} LP` : ''}</RankPoint>
-              <RankWinLose>{`${subRank.wins}승 ${subRank.losses}패`}</RankWinLose>
-            </RankDescription>
-          </RankDescriptionWrap>
-        </RankBox>
+        <PlayerRankInfo
+          ranks={soloRank}
+          title="솔로랭크"
+        />
+        <PlayerRankInfo
+          ranks={subRank}
+          title="자유 5:5 랭크"
+        />
       </RankIconBox>
     </UserProfileContainer>
   );

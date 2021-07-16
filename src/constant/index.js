@@ -28,3 +28,8 @@ export const VICTORY_OR_DEFEAT = {
   Win: '승리',
   Fail: '패배',
 };
+
+export const SELECTED_TEAM = {
+  100: '0',
+  200: '1',
+};
