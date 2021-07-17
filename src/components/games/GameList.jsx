@@ -4,7 +4,7 @@ import {
   SELECTED_TEAM,
 } from '../../constant';
 
-import Player from './Player';
+import GamePlayer from './GamePlayer';
 import GameTypeInfo from './GameTypeInfo';
 
 function GameList({ gameInfos, summonerName }) {
@@ -75,13 +75,13 @@ function GameList({ gameInfos, summonerName }) {
             </div>
             <div>
               <div>
-                <Player
+                <GamePlayer
                   participantIdentities={participantIdentities}
                   blueTeam
                 />
               </div>
               <div>
-                <Player
+                <GamePlayer
                   participantIdentities={participantIdentities}
                   blueTeam={false}
                 />
