@@ -1,4 +1,4 @@
-function Player({ participantIdentities, blueTeam }) {
+function GamePlayer({ participantIdentities, blueTeam }) {
   const teamIds = blueTeam ? [1, 2, 3, 4, 5] : [6, 7, 8, 9, 10];
   return (
     <div>
@@ -13,4 +13,4 @@ function Player({ participantIdentities, blueTeam }) {
   );
 }
 
-export default Player;
+export default GamePlayer;

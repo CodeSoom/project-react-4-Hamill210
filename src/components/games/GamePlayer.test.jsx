@@ -1,13 +1,13 @@
 import { render } from '@testing-library/react';
 
-import Player from './Player';
+import GamePlayer from './GamePlayer';
 
 import PARTICIPANT_IDENTITIES from '../../../fixtures/participantIdentities';
 
-describe('Player', () => {
+describe('GamePlayer', () => {
   it('renders', () => {
     const { container } = render(
-      <Player
+      <GamePlayer
         participantIdentities={PARTICIPANT_IDENTITIES}
         blueTeam={true}
       />,

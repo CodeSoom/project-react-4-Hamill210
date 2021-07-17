@@ -29,6 +29,14 @@ const { actions, reducer } = createSlice({
         },
       };
     },
+    initPlayerName(state) {
+      return {
+        ...state,
+        player: {
+          userName: '',
+        },
+      };
+    },
     setSummoner(state, { payload: summoner }) {
       return {
         ...state,
@@ -49,6 +57,7 @@ const { actions, reducer } = createSlice({
 
 export const {
   setPlayerName,
+  initPlayerName,
   setSummoner,
   setRanks,
 } = actions;
