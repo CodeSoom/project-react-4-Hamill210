@@ -8,6 +8,8 @@ import {
 import GamePlayer from './GamePlayer';
 import GameTypeInfo from './GameTypeInfo';
 import GamePlayerProfileInfo from './GamePlayerProfileInfo';
+import GamePlayerKDAInfo from './GamePlayerKDAInfo';
+import GamePlayerStatsInfo from './GamePlayerStatsInfo';
 
 const GameListContainer = styled.div({
   padding: '30px',
@@ -23,7 +25,7 @@ const GameItemWrap = styled.div({
 
 const GameItemDiv = styled.div({
   display: 'grid',
-  gridTemplateColumns: '70px 65px 55px auto 200px 30px',
+  gridTemplateColumns: '100px 150px 150px 200px 200px 200px',
   border: '1px solid #cdd2d2',
   borderCollapse: 'collapse',
   width: '100%',
@@ -51,12 +53,8 @@ function GameList({ gameInfos, summonerName }) {
 
           const { championId, spell1Id, spell2Id } = participantOfSummoner;
           const {
-            kills, deaths, assists, champLevel,
-            totalMinionsKilled, neutralMinionsKilled,
             perk0, perkSubStyle, perkPrimaryStyle,
           } = participantOfSummoner.stats;
-
-          const totalMinions = totalMinionsKilled + neutralMinionsKilled;
 
           return (
             <GameItemWrap key={gameId}>
@@ -75,38 +73,16 @@ function GameList({ gameInfos, summonerName }) {
                   perkSubStyle={perkSubStyle}
                   perkPrimaryStyle={perkPrimaryStyle}
                 />
+                <GamePlayerKDAInfo
+                  stats={participantOfSummoner.stats}
+                />
+                <GamePlayerStatsInfo
+                  participants={participants}
+                  stats={participantOfSummoner.stats}
+                  gameTime={gameTime}
+                  teamId={team.teamId}
+                />
                 <div>
-                  <div>
-                    <div>
-                      <span>{kills}</span>
-                      {' / '}
-                      <span>{deaths}</span>
-                      {' / '}
-                      <span>{assists}</span>
-                    </div>
-                    <div>
-                      <span>
-                        {((kills + assists) / deaths).toFixed(2)}
-                        :1
-                      </span>
-                      {' 평점 '}
-                    </div>
-                  </div>
-                  <div>
-                    <div>
-                      레벨
-                      {' '}
-                      {champLevel}
-                    </div>
-                    <div>
-                      <span>
-                        {totalMinions}
-                        {' '}
-                        {`(${((totalMinions) / new Date(gameTime).getMinutes()).toFixed(1)})`}
-                      </span>
-                      {' CS '}
-                    </div>
-                  </div>
                   <div>
                     <div>
                       <GamePlayer

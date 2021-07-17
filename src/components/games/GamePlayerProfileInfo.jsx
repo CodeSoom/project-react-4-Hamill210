@@ -106,20 +106,20 @@ function GamePlayerProfileInfo({
     <PlayerProfileWrap>
       <ChampionIconWrap>
         <ChampionIconImg
-          src={`https://ddragon.leagueoflegends.com/cdn/11.13.1/img/champion/${image.full}`}
+          src={`https://ddragon.leagueoflegends.com/cdn/11.14.1/img/champion/${image.full}`}
           alt={id}
         />
       </ChampionIconWrap>
       <SpellIconWrap>
         <SpellIconDiv>
           <SpellIconImg
-            src={`https://ddragon.leagueoflegends.com/cdn/11.13.1/img/spell/${getSpellName(leftSpell)}.png`}
+            src={`https://ddragon.leagueoflegends.com/cdn/11.14.1/img/spell/${getSpellName(leftSpell)}.png`}
             alt="left spell"
           />
         </SpellIconDiv>
         <SpellIconDiv>
           <SpellIconImg
-            src={`https://ddragon.leagueoflegends.com/cdn/11.13.1/img/spell/${getSpellName(rightSpell)}.png`}
+            src={`https://ddragon.leagueoflegends.com/cdn/11.14.1/img/spell/${getSpellName(rightSpell)}.png`}
             alt="right spell"
           />
         </SpellIconDiv>
