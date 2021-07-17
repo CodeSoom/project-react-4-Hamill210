@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import styled from '@emotion/styled';
 
 const SearchContainer = styled.div({
@@ -32,4 +33,4 @@ function SearchBox({ userName, onChangeValue, onClickSearchPlayer }) {
   );
 }
 
-export default SearchBox;
+export default memo(SearchBox);
