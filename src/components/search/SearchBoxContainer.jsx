@@ -4,6 +4,7 @@ import SearchBox from './SearchBox';
 
 import {
   setPlayerName,
+  initPlayerName,
   loadSummoners,
 } from '../../reducers/player/slice';
 
@@ -20,6 +21,7 @@ export default function SearchBoxContainer() {
 
   function handleClickSearchPlayer() {
     dispatch(loadSummoners(userName));
+    dispatch(initPlayerName());
   }
 
   return (
