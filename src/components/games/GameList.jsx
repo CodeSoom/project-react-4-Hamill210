@@ -1,29 +1,22 @@
 import { memo } from 'react';
 
-import QUEUES from '../../constant/queues';
 import {
-  QUEUE_TYPE,
-  getFormattedTimeDifference,
-  VICTORY_OR_DEFEAT,
   SELECTED_TEAM,
 } from '../../constant';
 
 import Player from './Player';
+import GameTypeInfo from './GameTypeInfo';
 
 function GameList({ gameInfos, summonerName }) {
   if (gameInfos.length === 0) {
     return <></>;
   }
 
-  const now = new Date().getTime();
-
   return (
     gameInfos.map(({
       gameId, gameCreation, gameDuration, queueId, teams, participants, participantIdentities,
     }) => {
       const gameTime = gameDuration * 1000;
-      const gamePlayTime = `${new Date(gameTime).getMinutes()}분 ${new Date(gameTime).getSeconds()}초`;
-
       const participantIdOfSummoner = participantIdentities
         .filter(({ player }) => (player.summonerName === summonerName))[0].participantId;
       const participantOfSummoner = participants
@@ -40,20 +33,12 @@ function GameList({ gameInfos, summonerName }) {
       return (
         <div key={gameId}>
           <div>
-            <div>
-              <div>
-                {QUEUE_TYPE[QUEUES.filter((queue) => queue.queueId === queueId)[0].description]}
-              </div>
-              <div>
-                <span>
-                  {getFormattedTimeDifference(now - (gameCreation + gameTime))}
-                </span>
-              </div>
-              <div>
-                {VICTORY_OR_DEFEAT[team.win]}
-              </div>
-              <div>{gamePlayTime}</div>
-            </div>
+            <GameTypeInfo
+              gameCreation={gameCreation}
+              gameTime={gameTime}
+              queueId={queueId}
+              win={team.win}
+            />
             <div>
               <div>카밀</div>
             </div>
