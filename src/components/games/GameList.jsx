@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import QUEUES from '../../constant/queues';
 import {
   QUEUE_TYPE,
@@ -106,4 +108,4 @@ function GameList({ gameInfos, summonerName }) {
     }));
 }
 
-export default GameList;
+export default memo(GameList);
