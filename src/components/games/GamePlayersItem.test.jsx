@@ -1,16 +1,17 @@
 import { render } from '@testing-library/react';
 
-import GamePlayer from './GamePlayer';
+import GamePlayersItem from "./GamePlayersItem";
 
+import PARTICIPANTS from '../../../fixtures/participants';
 import PARTICIPANT_IDENTITIES from '../../../fixtures/participantIdentities';
 
-describe('GamePlayer', () => {
+describe('GamePlayersItem', () => {
   it('renders', () => {
     const { container } = render(
-      <GamePlayer
-        participantIdentities={PARTICIPANT_IDENTITIES}
-        blueTeam={true}
-      />,
+      <GamePlayersItem
+        participants={PARTICIPANTS}
+        participantIdentity={PARTICIPANT_IDENTITIES}
+      />
     );
 
     expect(container).toHaveTextContent('최하누리');
@@ -18,6 +19,5 @@ describe('GamePlayer', () => {
     expect(container).toHaveTextContent('Returned Player');
     expect(container).toHaveTextContent('Airsalt');
     expect(container).toHaveTextContent('베 2');
-
   });
 });
