@@ -31,18 +31,18 @@ const GamePlayTimeWrap = styled.div({
   cursor: 'help',
 });
 
-const Bar = styled.div({
+const Bar = styled.div(({ win }) => ({
   display: 'block',
   width: '27px',
   height: '2px',
   margin: '5px auto',
-  background: '#99b9cf',
-});
+  background: win === 'Win' ? '#99b9cf' : '#cea7a7',
+}));
 
-const WinLoseWrap = styled.div({
+const WinLoseWrap = styled.div(({ win }) => ({
   fontWeight: 'bold',
-  color: '#1a78ae',
-});
+  color: win === 'Win' ? '#1a78ae' : '#c6443e',
+}));
 
 function GameTypeInfo({
   queueId, gameCreation, gameTime, win,
@@ -60,8 +60,8 @@ function GameTypeInfo({
           {getFormattedTimeDifference(now - (gameCreation + gameTime))}
         </GamePlayTimeWrap>
       </div>
-      <Bar />
-      <WinLoseWrap>
+      <Bar win={win} />
+      <WinLoseWrap win={win}>
         {VICTORY_OR_DEFEAT[win]}
       </WinLoseWrap>
       <div>

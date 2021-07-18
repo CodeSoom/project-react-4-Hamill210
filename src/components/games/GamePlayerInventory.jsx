@@ -62,7 +62,7 @@ const TrinketImg = styled.img({
   verticalAlign: 'bottom',
 });
 
-function GamePlayerInventory({ stats }) {
+function GamePlayerInventory({ win, stats }) {
   const {
     item0, item1, item2, item3, item4, item5, item6,
   } = stats;
@@ -84,7 +84,10 @@ function GamePlayerInventory({ stats }) {
         </ItemBtn>
       </ItemListDiv>
       <TrinketDiv>
-        <TrinketImg src="https://opgg-static.akamaized.net/images/site/summoner/icon-ward-blue.png" alt="ward" />
+        <TrinketImg
+          src={`https://opgg-static.akamaized.net/images/site/summoner/${win === 'Win' ? 'icon-ward-blue.png' : 'icon-ward-red.png'}`}
+          alt="ward"
+        />
         {' 제어 와드 '}
         <span>3</span>
       </TrinketDiv>
