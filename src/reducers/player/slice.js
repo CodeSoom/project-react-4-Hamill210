@@ -44,7 +44,8 @@ const { actions, reducer } = createSlice({
       };
     },
     setRanks(state, { payload: ranks }) {
-      const [subRank, soloRank] = ranks;
+      const soloRank = ranks.find(({ queueType }) => queueType === 'RANKED_SOLO_5x5');
+      const subRank = ranks.find(({ queueType }) => queueType === 'RANKED_FLEX_SR');
 
       return {
         ...state,
