@@ -5,12 +5,12 @@ import {
   SELECTED_TEAM,
 } from '../../constant';
 
-import GamePlayer from './GamePlayer';
 import GameTypeInfo from './GameTypeInfo';
 import GamePlayerProfileInfo from './GamePlayerProfileInfo';
 import GamePlayerKDAInfo from './GamePlayerKDAInfo';
 import GamePlayerStatsInfo from './GamePlayerStatsInfo';
 import GamePlayerInventory from './GamePlayerInventory';
+import GamePlayers from './GamePlayers';
 
 const GameListContainer = styled.div({
   padding: '30px',
@@ -26,7 +26,7 @@ const GameItemWrap = styled.div({
 
 const GameItemDiv = styled.div({
   display: 'grid',
-  gridTemplateColumns: '100px 150px 150px 200px 200px 200px',
+  gridTemplateColumns: '100px 150px 120px 120px 150px 200px',
   border: '1px solid #cdd2d2',
   borderCollapse: 'collapse',
   width: '100%',
@@ -86,22 +86,10 @@ function GameList({ gameInfos, summonerName }) {
                 <GamePlayerInventory
                   stats={participantOfSummoner.stats}
                 />
-                <div>
-                  <div>
-                    <div>
-                      <GamePlayer
-                        participantIdentities={participantIdentities}
-                        blueTeam
-                      />
-                    </div>
-                    <div>
-                      <GamePlayer
-                        participantIdentities={participantIdentities}
-                        blueTeam={false}
-                      />
-                    </div>
-                  </div>
-                </div>
+                <GamePlayers
+                  participants={participants}
+                  participantIdentities={participantIdentities}
+                />
               </GameItemDiv>
             </GameItemWrap>
           );
