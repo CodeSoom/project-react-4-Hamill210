@@ -3,11 +3,15 @@ import {
   fetchMatchInfos,
 } from '../../services/api';
 
+const initialInfos = {
+  matchInfos: [],
+  gameInfos: [],
+};
+
 const { actions, reducer } = createSlice({
   name: 'games',
   initialState: {
-    matchInfos: [],
-    gameInfos: [],
+    ...initialInfos,
   },
   reducers: {
     setMatchInfos(state, { payload: matchInfos }) {
@@ -22,12 +26,19 @@ const { actions, reducer } = createSlice({
         gameInfos,
       };
     },
+    clearInfos(state) {
+      return {
+        ...state,
+        ...initialInfos,
+      };
+    },
   },
 });
 
 export const {
   setMatchInfos,
   setGameInfo,
+  clearInfos,
 } = actions;
 
 export function loadMatchInfos(encryptedAccountId) {

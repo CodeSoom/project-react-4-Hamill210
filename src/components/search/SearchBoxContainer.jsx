@@ -8,6 +8,8 @@ import {
   loadSummoners,
 } from '../../reducers/player/slice';
 
+import { clearInfos } from '../../reducers/games/slice';
+
 export default function SearchBoxContainer() {
   const dispatch = useDispatch();
 
@@ -22,6 +24,7 @@ export default function SearchBoxContainer() {
   function handleClickSearchPlayer() {
     dispatch(loadSummoners(userName));
     dispatch(initPlayerName());
+    dispatch(clearInfos());
   }
 
   return (
