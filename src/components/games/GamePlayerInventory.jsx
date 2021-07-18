@@ -65,6 +65,7 @@ const TrinketImg = styled.img({
 function GamePlayerInventory({ win, stats }) {
   const {
     item0, item1, item2, item3, item4, item5, item6,
+    visionWardsBoughtInGame,
   } = stats;
 
   const itemList = [item0, item1, item2, item6, item3, item4, item5];
@@ -89,7 +90,7 @@ function GamePlayerInventory({ win, stats }) {
           alt="ward"
         />
         {' 제어 와드 '}
-        <span>3</span>
+        <span>{visionWardsBoughtInGame}</span>
       </TrinketDiv>
     </InventoryWrap>
   );
