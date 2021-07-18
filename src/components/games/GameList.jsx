@@ -10,6 +10,7 @@ import GameTypeInfo from './GameTypeInfo';
 import GamePlayerProfileInfo from './GamePlayerProfileInfo';
 import GamePlayerKDAInfo from './GamePlayerKDAInfo';
 import GamePlayerStatsInfo from './GamePlayerStatsInfo';
+import GamePlayerInventory from './GamePlayerInventory';
 
 const GameListContainer = styled.div({
   padding: '30px',
@@ -81,6 +82,9 @@ function GameList({ gameInfos, summonerName }) {
                   stats={participantOfSummoner.stats}
                   gameTime={gameTime}
                   teamId={team.teamId}
+                />
+                <GamePlayerInventory
+                  stats={participantOfSummoner.stats}
                 />
                 <div>
                   <div>
