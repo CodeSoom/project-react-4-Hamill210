@@ -50,7 +50,7 @@ function PlayerInfo({
 
   if (!name) {
     return (
-      <p>소환사명을 검색해주세요.</p>
+      <></>
     );
   }
 
