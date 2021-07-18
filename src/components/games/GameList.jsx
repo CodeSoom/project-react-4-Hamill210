@@ -24,15 +24,15 @@ const GameItemWrap = styled.div({
   marginBottom: '10px',
 });
 
-const GameItemDiv = styled.div({
+const GameItemDiv = styled.div(({ win }) => ({
   display: 'grid',
   gridTemplateColumns: '100px 150px 120px 120px 150px 200px',
   border: '1px solid #cdd2d2',
   borderCollapse: 'collapse',
   width: '100%',
-  backgroundColor: '#a3cfec',
-  borderColor: '#99b9cf',
-});
+  backgroundColor: win === 'Win' ? '#a3cfec' : '#e2b6b3',
+  borderColor: win === 'Win' ? '#99b9cf' : '#cea7a7',
+}));
 
 function GameList({ gameInfos, summonerName }) {
   if (gameInfos.length === 0) {
@@ -59,7 +59,7 @@ function GameList({ gameInfos, summonerName }) {
 
           return (
             <GameItemWrap key={gameId}>
-              <GameItemDiv>
+              <GameItemDiv win={team.win}>
                 <GameTypeInfo
                   gameCreation={gameCreation}
                   gameTime={gameTime}
@@ -84,6 +84,7 @@ function GameList({ gameInfos, summonerName }) {
                   teamId={team.teamId}
                 />
                 <GamePlayerInventory
+                  win={team.win}
                   stats={participantOfSummoner.stats}
                 />
                 <GamePlayers
