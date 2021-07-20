@@ -1,5 +1,7 @@
 import { memo } from 'react';
 import styled from '@emotion/styled';
+import { RED_FONT_COLOR } from '../../styles/colors';
+import { BLUE_TEAM_ID, RED_TEAM_ID } from '../../constant';
 
 const StatsWrap = styled.div({
   display: 'grid',
@@ -15,7 +17,7 @@ const StatsWrap = styled.div({
 });
 
 const KillConcernDiv = styled.div({
-  color: '#c6443e',
+  color: RED_FONT_COLOR,
 });
 
 function GamePlayerStatsInfo({
@@ -23,9 +25,10 @@ function GamePlayerStatsInfo({
 }) {
   function getTotalKill(players, id) {
     return players.reduce((cur, acc, i) => {
-      if (id === 100 ? i < 5 : i >= 5) {
+      if ((id === BLUE_TEAM_ID && i < 5) || (id === RED_TEAM_ID && i >= 5)) {
         return cur + acc.stats.kills;
       }
+
       return cur;
     }, 0);
   }

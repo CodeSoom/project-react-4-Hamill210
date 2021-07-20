@@ -11,6 +11,12 @@ import GamePlayerKDAInfo from './GamePlayerKDAInfo';
 import GamePlayerStatsInfo from './GamePlayerStatsInfo';
 import GamePlayerInventory from './GamePlayerInventory';
 import GamePlayers from './GamePlayers';
+import {
+  BLUE_BACKGROUND_COLOR,
+  BLUE_BORDER_COLOR,
+  RED_BACKGROUND_COLOR,
+  RED_BORDER_COLOR,
+} from '../../styles/colors';
 
 const GameListContainer = styled.div({
   padding: '30px',
@@ -24,14 +30,14 @@ const GameItemWrap = styled.div({
   marginBottom: '10px',
 });
 
-const GameItemDiv = styled.div(({ win }) => ({
+const GameItemDiv = styled.div(({ isWin }) => ({
   display: 'grid',
   gridTemplateColumns: '100px 174px 120px 120px 150px 274px',
   border: '1px solid #cdd2d2',
   borderCollapse: 'collapse',
   width: '100%',
-  backgroundColor: win === 'Win' ? '#a3cfec' : '#e2b6b3',
-  borderColor: win === 'Win' ? '#99b9cf' : '#cea7a7',
+  backgroundColor: isWin ? BLUE_BACKGROUND_COLOR.container : RED_BACKGROUND_COLOR.container,
+  borderColor: isWin ? BLUE_BORDER_COLOR : RED_BORDER_COLOR,
 }));
 
 function GameList({ gameInfos, summonerName }) {
@@ -50,7 +56,9 @@ function GameList({ gameInfos, summonerName }) {
             .filter(({ player }) => (player.summonerName === summonerName))[0].participantId;
           const participantOfSummoner = participants
             .filter((participant) => (participant.participantId === participantIdOfSummoner))[0];
+
           const team = teams[SELECTED_TEAM[participantOfSummoner.teamId]];
+          const isWin = team.win === 'Win';
 
           const { championId, spell1Id, spell2Id } = participantOfSummoner;
           const {
@@ -59,12 +67,13 @@ function GameList({ gameInfos, summonerName }) {
 
           return (
             <GameItemWrap key={gameId}>
-              <GameItemDiv win={team.win}>
+              <GameItemDiv isWin={isWin}>
                 <GameTypeInfo
                   gameCreation={gameCreation}
                   gameTime={gameTime}
                   queueId={queueId}
                   win={team.win}
+                  isWin={isWin}
                 />
                 <GamePlayerProfileInfo
                   championId={championId}
@@ -84,7 +93,7 @@ function GameList({ gameInfos, summonerName }) {
                   teamId={team.teamId}
                 />
                 <GamePlayerInventory
-                  win={team.win}
+                  isWin={isWin}
                   stats={participantOfSummoner.stats}
                 />
                 <GamePlayers

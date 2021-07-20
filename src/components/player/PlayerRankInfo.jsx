@@ -44,25 +44,21 @@ const RankWinLose = styled.span({
 });
 
 function PlayerRankInfo({ ranks, title }) {
-  if (!ranks) {
-    return (
-      <RankBox>
-        <RankImage src="/images/ranked-emblems/UNRANKED.png" alt="UNRANKED" />
-        <RankDescriptionWrap>
-          <RankDescription>
-            <RankTitle>{title}</RankTitle>
-            <RankTier>Unranked</RankTier>
-            <RankPoint>0 LP</RankPoint>
-            <RankWinLose>0승 0패</RankWinLose>
-          </RankDescription>
-        </RankDescriptionWrap>
-      </RankBox>
-    );
-  }
+  const defaultRanks = {
+    tier: 'UNRANKED',
+    rank: '',
+    leaguePoints: 0,
+    wins: 0,
+    losses: 0,
+  };
 
   const {
-    tier, rank, leaguePoints, wins, losses,
-  } = ranks;
+    tier,
+    rank,
+    leaguePoints,
+    wins,
+    losses,
+  } = ranks || defaultRanks;
 
   return (
     <RankBox>

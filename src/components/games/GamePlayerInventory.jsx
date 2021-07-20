@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import styled from '@emotion/styled';
+import { BLUE_BACKGROUND_COLOR, RED_BACKGROUND_COLOR } from '../../styles/colors';
 
 const InventoryWrap = styled.div({
   display: 'grid',
@@ -15,7 +16,7 @@ const ItemListDiv = styled.div({
   margin: '0 auto',
 });
 
-const ItemDiv = styled.div(({ win }) => ({
+const ItemDiv = styled.div(({ isWin }) => ({
   display: 'inline-block',
   width: '28px',
   height: '28px',
@@ -23,7 +24,7 @@ const ItemDiv = styled.div(({ win }) => ({
   marginTop: '2px',
   marginRight: '2px',
   overflow: 'hidden',
-  backgroundColor: win === 'Win' ? '#99b9cf' : '#cea7a7',
+  backgroundColor: isWin ? BLUE_BACKGROUND_COLOR.item : RED_BACKGROUND_COLOR.item,
 }));
 
 const ItemImg = styled.img({
@@ -65,19 +66,18 @@ const TrinketImg = styled.img({
   verticalAlign: 'bottom',
 });
 
-function GamePlayerInventory({ win, stats }) {
+function GamePlayerInventory({ isWin, stats }) {
   const {
     item0, item1, item2, item3, item4, item5, item6,
     visionWardsBoughtInGame,
   } = stats;
-
   const itemList = [item0, item1, item2, item6, item3, item4, item5];
 
   return (
     <InventoryWrap>
       <ItemListDiv>
         {itemList.map((item) => (
-          <ItemDiv win={win}>
+          <ItemDiv isWin={isWin}>
             {item
               ? <ItemImg src={`https://ddragon.leagueoflegends.com/cdn/11.14.1/img/item/${item}.png`} alt={`ItemId-${item}`} />
               : <NoItemDiv />}
@@ -85,14 +85,14 @@ function GamePlayerInventory({ win, stats }) {
         ))}
         <ItemBtn type="button">
           <ItemPocketImg
-            src={`https://opgg-static.akamaized.net/css3/sprite/images/${win === 'Win' ? 'icon-buildblue-p.png' : 'icon-buildred-p.png'}`}
+            src={`https://opgg-static.akamaized.net/css3/sprite/images/${isWin ? 'icon-buildblue-p.png' : 'icon-buildred-p.png'}`}
             alt="pocket"
           />
         </ItemBtn>
       </ItemListDiv>
       <TrinketDiv>
         <TrinketImg
-          src={`https://opgg-static.akamaized.net/images/site/summoner/${win === 'Win' ? 'icon-ward-blue.png' : 'icon-ward-red.png'}`}
+          src={`https://opgg-static.akamaized.net/images/site/summoner/${isWin ? 'icon-ward-blue.png' : 'icon-ward-red.png'}`}
           alt="ward"
         />
         {' 제어 와드 '}
