@@ -15,7 +15,7 @@ const ItemListDiv = styled.div({
   margin: '0 auto',
 });
 
-const ItemDiv = styled.div({
+const ItemDiv = styled.div(({ win }) => ({
   display: 'inline-block',
   width: '28px',
   height: '28px',
@@ -23,8 +23,8 @@ const ItemDiv = styled.div({
   marginTop: '2px',
   marginRight: '2px',
   overflow: 'hidden',
-  backgroundColor: '#99b9cf',
-});
+  backgroundColor: win === 'Win' ? '#99b9cf' : '#cea7a7',
+}));
 
 const ItemImg = styled.img({
   width: '100%',
@@ -44,8 +44,8 @@ const ItemBtn = styled.button({
   border: 'none',
   padding: 0,
   background: 'none',
-  width: '22px',
-  heigth: '22px',
+  width: '28px',
+  height: '28px',
 });
 
 const ItemPocketImg = styled.img({
@@ -54,10 +54,10 @@ const ItemPocketImg = styled.img({
 });
 
 const TrinketDiv = styled.div({
-  marginTop: '7px',
+  marginTop: '10px',
   color: '#353a3a',
   lineHeight: '13px',
-  fontSize: '11px',
+  fontSize: '12px',
   textAlign: 'center',
 });
 
@@ -77,14 +77,17 @@ function GamePlayerInventory({ win, stats }) {
     <InventoryWrap>
       <ItemListDiv>
         {itemList.map((item) => (
-          <ItemDiv>
+          <ItemDiv win={win}>
             {item
               ? <ItemImg src={`https://ddragon.leagueoflegends.com/cdn/11.14.1/img/item/${item}.png`} alt={`ItemId-${item}`} />
               : <NoItemDiv />}
           </ItemDiv>
         ))}
         <ItemBtn type="button">
-          <ItemPocketImg src="https://opgg-static.akamaized.net/css3/sprite/images/icon-buildblue-p.png" alt="blue-pocket" />
+          <ItemPocketImg
+            src={`https://opgg-static.akamaized.net/css3/sprite/images/${win === 'Win' ? 'icon-buildblue-p.png' : 'icon-buildred-p.png'}`}
+            alt="pocket"
+          />
         </ItemBtn>
       </ItemListDiv>
       <TrinketDiv>
