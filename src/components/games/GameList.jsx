@@ -30,7 +30,7 @@ const GameItemDiv = styled.div(({ isWin }) => ({
   border: '1px solid #cdd2d2',
   borderCollapse: 'collapse',
   width: '100%',
-  backgroundColor:isWin ? '#a3cfec' : '#e2b6b3',
+  backgroundColor: isWin ? '#a3cfec' : '#e2b6b3',
   borderColor: isWin ? '#99b9cf' : '#cea7a7',
 }));
 
