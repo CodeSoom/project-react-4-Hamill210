@@ -22,10 +22,14 @@ function GamePlayerStatsInfo({
   participants, stats, gameTime, teamId,
 }) {
   function getTotalKill(players, id) {
+    const isBlueTeam = id === 100;
+    const isRedTeam = id === 200;
+
     return players.reduce((cur, acc, i) => {
-      if (id === 100 ? i < 5 : i >= 5) {
+      if ((isBlueTeam && i < 5) || (isRedTeam && i >= 5)) {
         return cur + acc.stats.kills;
       }
+
       return cur;
     }, 0);
   }
