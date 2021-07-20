@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import styled from '@emotion/styled';
+import { RED_FONT_COLOR } from '../../styles/colors';
 
 const StatsWrap = styled.div({
   display: 'grid',
@@ -15,7 +16,7 @@ const StatsWrap = styled.div({
 });
 
 const KillConcernDiv = styled.div({
-  color: '#c6443e',
+  color: RED_FONT_COLOR,
 });
 
 function GamePlayerStatsInfo({

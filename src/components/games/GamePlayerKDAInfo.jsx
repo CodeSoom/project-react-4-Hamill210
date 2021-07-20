@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import styled from '@emotion/styled';
+import { RED_FONT_COLOR } from '../../styles/colors';
 
 const KDAWrap = styled.div({
   display: 'grid',
@@ -28,7 +29,7 @@ const KillAssistSpan = styled.span({
 
 const DeathSpan = styled.span({
   ...KDACommon,
-  color: '#c6443e',
+  color: RED_FONT_COLOR,
 });
 
 const KDARatio = styled.div({

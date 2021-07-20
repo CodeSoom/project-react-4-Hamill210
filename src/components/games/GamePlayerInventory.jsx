@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import styled from '@emotion/styled';
+import { BLUE_BACKGROUND_COLOR, RED_BACKGROUND_COLOR } from '../../styles/colors';
 
 const InventoryWrap = styled.div({
   display: 'grid',
@@ -23,7 +24,7 @@ const ItemDiv = styled.div(({ isWin }) => ({
   marginTop: '2px',
   marginRight: '2px',
   overflow: 'hidden',
-  backgroundColor: isWin ? '#99b9cf' : '#cea7a7',
+  backgroundColor: isWin ? BLUE_BACKGROUND_COLOR.item : RED_BACKGROUND_COLOR.item,
 }));
 
 const ItemImg = styled.img({

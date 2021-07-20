@@ -11,6 +11,12 @@ import GamePlayerKDAInfo from './GamePlayerKDAInfo';
 import GamePlayerStatsInfo from './GamePlayerStatsInfo';
 import GamePlayerInventory from './GamePlayerInventory';
 import GamePlayers from './GamePlayers';
+import {
+  BLUE_BACKGROUND_COLOR,
+  BLUE_BORDER_COLOR,
+  RED_BACKGROUND_COLOR,
+  RED_BORDER_COLOR,
+} from '../../styles/colors';
 
 const GameListContainer = styled.div({
   padding: '30px',
@@ -30,8 +36,8 @@ const GameItemDiv = styled.div(({ isWin }) => ({
   border: '1px solid #cdd2d2',
   borderCollapse: 'collapse',
   width: '100%',
-  backgroundColor: isWin ? '#a3cfec' : '#e2b6b3',
-  borderColor: isWin ? '#99b9cf' : '#cea7a7',
+  backgroundColor: isWin ? BLUE_BACKGROUND_COLOR.container : RED_BACKGROUND_COLOR.container,
+  borderColor: isWin ? BLUE_BORDER_COLOR : RED_BORDER_COLOR,
 }));
 
 function GameList({ gameInfos, summonerName }) {

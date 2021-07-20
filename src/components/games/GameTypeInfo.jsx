@@ -7,6 +7,12 @@ import {
   QUEUE_TYPE,
   VICTORY_OR_DEFEAT,
 } from '../../constant';
+import {
+  BLUE_BACKGROUND_COLOR,
+  BLUE_FONT_COLOR,
+  RED_BACKGROUND_COLOR,
+  RED_FONT_COLOR,
+} from '../../styles/colors';
 
 const GameTypeWrap = styled.div({
   display: 'grid',
@@ -38,12 +44,12 @@ const Bar = styled.div(({ isWin }) => ({
   width: '27px',
   height: '2px',
   margin: '5px auto',
-  background: isWin ? '#99b9cf' : '#cea7a7',
+  background: isWin ? BLUE_BACKGROUND_COLOR.bar : RED_BACKGROUND_COLOR.bar,
 }));
 
 const WinLoseWrap = styled.div(({ isWin }) => ({
   fontWeight: 'bold',
-  color: isWin ? '#1a78ae' : '#c6443e',
+  color: isWin ? BLUE_FONT_COLOR : RED_FONT_COLOR,
 }));
 
 function GameTypeInfo({
