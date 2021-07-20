@@ -9,15 +9,17 @@ const PlayerProfileWrap = styled.div({
   display: 'flex',
   width: '174px',
   fontSize: '0',
-  height: '96px',
+  height: 'auto',
   justifyContent: 'center',
   alignItems: 'center',
+  flexWrap: 'wrap',
+  marginTop: '11px',
 });
 
 const ChampionIconWrap = styled.div({
   display: 'inline-block',
-  width: '46px',
-  height: '46px',
+  width: '64px',
+  height: '64px',
   alignSelf: 'center',
   borderRadius: '50%',
   overflow: 'hidden',
@@ -41,8 +43,8 @@ const SpellIconWrap = styled.div({
 const SpellIconDiv = styled.div({
   marginLeft: '0',
   dispaly: 'block',
-  width: '22px',
-  height: '22px',
+  width: '32px',
+  height: '32px',
   marginTop: '2px',
   borderRadius: '3px',
   overflow: 'hidden',
@@ -55,8 +57,8 @@ const SpellIconImg = styled.img({
 });
 
 const RuneIconDiv = styled.div({
-  width: '22px',
-  height: '22px',
+  width: '32px',
+  height: '32px',
   marginTop: '0',
 });
 
@@ -76,13 +78,11 @@ const SubRuneIconImg = styled.img({
 });
 
 const ChampionNameDiv = styled.div({
-  marginTop: '8px',
-  fontSize: '11px',
+  marginTop: '-4px',
+  padding: '9px',
+  fontSize: '13px',
   color: '#555',
   textAlign: 'center',
-  whiteSpace: 'nowrap',
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
 });
 
 const ChampionNameSpan = styled.span({

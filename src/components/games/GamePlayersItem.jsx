@@ -31,11 +31,14 @@ const ChampionNameDiv = styled.div({
   maxWidth: '100px',
   marginLeft: '5px',
   verticalAlign: 'middle',
-  fontSize: '11px',
+  fontSize: '12px',
   color: '#555',
 });
 
 const ChampionName = styled.div({
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
   color: '#222',
 });
 

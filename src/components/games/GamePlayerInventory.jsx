@@ -11,14 +11,14 @@ const InventoryWrap = styled.div({
 });
 
 const ItemListDiv = styled.div({
-  width: '96px',
+  width: '120px',
   margin: '0 auto',
 });
 
 const ItemDiv = styled.div({
   display: 'inline-block',
-  width: '22px',
-  height: '22px',
+  width: '28px',
+  height: '28px',
   borderRadius: '3px',
   marginTop: '2px',
   marginRight: '2px',

@@ -3,11 +3,12 @@ import styled from '@emotion/styled';
 
 const StatsWrap = styled.div({
   display: 'grid',
+  margin: 'auto',
   height: 'auto',
   width: '120px',
-  fontSize: '11px',
+  fontSize: '14px',
   textAlign: 'center',
-  lineHeight: '18px',
+  lineHeight: '22px',
   color: '#555e5e',
   justifyContent: 'center',
   alignItems: 'center',

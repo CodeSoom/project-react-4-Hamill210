@@ -5,6 +5,7 @@ const KDAWrap = styled.div({
   display: 'grid',
   fontSize: '11px',
   textAlign: 'center',
+  margin: 'auto',
   height: 'auto',
   justifyContent: 'center',
   alignItems: 'center',
@@ -12,7 +13,7 @@ const KDAWrap = styled.div({
 
 const KDADiv = styled.div({
   color: '#879292',
-  fontSize: '15px',
+  fontSize: '24px',
   whiteSpace: 'nowrap',
 });
 
