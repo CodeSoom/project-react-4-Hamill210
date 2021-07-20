@@ -26,9 +26,8 @@ const { actions, reducer } = createSlice({
         gameInfos,
       };
     },
-    clearInfos(state) {
+    clearInfos() {
       return {
-        ...state,
         ...initialInfos,
       };
     },
