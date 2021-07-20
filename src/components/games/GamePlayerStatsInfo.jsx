@@ -2,13 +2,16 @@ import { memo } from 'react';
 import styled from '@emotion/styled';
 
 const StatsWrap = styled.div({
-  height: '96px',
-  alignSelf: 'center',
-  width: '90px',
-  fontSize: '11px',
+  display: 'grid',
+  margin: 'auto',
+  height: 'auto',
+  width: '120px',
+  fontSize: '14px',
   textAlign: 'center',
-  lineHeight: '18px',
+  lineHeight: '22px',
   color: '#555e5e',
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
 const KillConcernDiv = styled.div({

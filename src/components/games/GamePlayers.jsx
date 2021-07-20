@@ -4,10 +4,12 @@ import styled from '@emotion/styled';
 import GamePlayersItem from './GamePlayersItem';
 
 const PlayersWrap = styled.div({
-  width: '250px',
-  height: '96px',
-  alignSelf: 'center',
+  display: 'flex',
+  width: '274px',
+  height: 'auto',
   fontSize: 0,
+  alignItems: 'center',
+  justifyContent: 'center',
 });
 
 const TeamWrap = styled.div({

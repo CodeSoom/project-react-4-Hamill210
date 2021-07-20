@@ -9,12 +9,14 @@ import {
 } from '../../constant';
 
 const GameTypeWrap = styled.div({
-  width: '70px',
-  height: '96px',
-  lineHeight: '16px',
+  display: 'grid',
+  width: '100px',
+  height: 'auto',
+  lineHeight: '22px',
   color: '#555',
-  fontSize: '11px',
+  fontSize: '14px',
   textAlign: 'center',
+  justifyContent: 'center',
   alignSelf: 'center',
 });
 

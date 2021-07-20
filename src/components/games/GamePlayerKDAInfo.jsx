@@ -2,15 +2,18 @@ import { memo } from 'react';
 import styled from '@emotion/styled';
 
 const KDAWrap = styled.div({
+  display: 'grid',
   fontSize: '11px',
   textAlign: 'center',
-  height: '96px',
-  alignSelf: 'center',
+  margin: 'auto',
+  height: 'auto',
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
 const KDADiv = styled.div({
   color: '#879292',
-  fontSize: '15px',
+  fontSize: '24px',
   whiteSpace: 'nowrap',
 });
 
