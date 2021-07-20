@@ -5,9 +5,9 @@ import CHAMPION from '../../constant/champion';
 
 const PlayerDiv = styled.div({
   display: 'block',
-  width: '125px',
-  height: '18px',
-  marginLeft: '3px',
+  width: '137px',
+  height: 'auto',
+  margin: '2px 0px',
   textAlign: 'left',
   whiteSpace: 'none',
 });
@@ -29,6 +29,7 @@ const ChampionIconImg = styled.img({
 const ChampionNameDiv = styled.div({
   display: 'inline-block',
   maxWidth: '100px',
+  marginLeft: '5px',
   verticalAlign: 'middle',
   fontSize: '11px',
   color: '#555',

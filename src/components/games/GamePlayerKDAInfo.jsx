@@ -2,10 +2,12 @@ import { memo } from 'react';
 import styled from '@emotion/styled';
 
 const KDAWrap = styled.div({
+  display: 'grid',
   fontSize: '11px',
   textAlign: 'center',
-  height: '96px',
-  alignSelf: 'center',
+  height: 'auto',
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
 const KDADiv = styled.div({

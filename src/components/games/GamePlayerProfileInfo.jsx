@@ -6,10 +6,12 @@ import SPELL from '../../constant/spell';
 import RUNE from '../../constant/rune';
 
 const PlayerProfileWrap = styled.div({
-  width: '100px',
+  display: 'flex',
+  width: '174px',
   fontSize: '0',
   height: '96px',
-  alignSelf: 'center',
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
 const ChampionIconWrap = styled.div({

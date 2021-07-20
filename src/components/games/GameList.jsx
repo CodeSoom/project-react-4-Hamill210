@@ -15,7 +15,7 @@ import GamePlayers from './GamePlayers';
 const GameListContainer = styled.div({
   padding: '30px',
   border: '1px solid rgb(222, 222, 222)',
-  borderRadius: '5px',
+  borderRadius: '10px',
   backgroundColor: 'whitesmoke',
 });
 
@@ -26,7 +26,7 @@ const GameItemWrap = styled.div({
 
 const GameItemDiv = styled.div(({ win }) => ({
   display: 'grid',
-  gridTemplateColumns: '100px 150px 120px 120px 150px 200px',
+  gridTemplateColumns: '100px 174px 120px 120px 150px 274px',
   border: '1px solid #cdd2d2',
   borderCollapse: 'collapse',
   width: '100%',

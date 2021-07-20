@@ -2,9 +2,12 @@ import { memo } from 'react';
 import styled from '@emotion/styled';
 
 const InventoryWrap = styled.div({
-  height: '96px',
+  display: 'grid',
+  height: 'auto',
   alignSelf: 'center',
   fontSize: '0',
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
 const ItemListDiv = styled.div({
