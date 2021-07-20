@@ -2,6 +2,7 @@ import { memo } from 'react';
 import styled from '@emotion/styled';
 
 import GamePlayersItem from './GamePlayersItem';
+import { BLUE_TEAM_PLAYER_IDS, RED_TEAM_PLAYER_IDS } from '../../constant';
 
 const PlayersWrap = styled.div({
   display: 'flex',
@@ -18,14 +19,11 @@ const TeamWrap = styled.div({
 });
 
 function GamePlayers({ participants, participantIdentities }) {
-  const blueTeamPlayerIds = [1, 2, 3, 4, 5];
-  const redTeamPlayerIds = [6, 7, 8, 9, 10];
-
   return (
     <PlayersWrap>
       <TeamWrap>
         {participantIdentities
-          .filter(({ participantId }) => blueTeamPlayerIds.includes(participantId))
+          .filter(({ participantId }) => BLUE_TEAM_PLAYER_IDS.includes(participantId))
           .map((participantIdentity) => (
             <GamePlayersItem
               participants={participants}
@@ -35,7 +33,7 @@ function GamePlayers({ participants, participantIdentities }) {
       </TeamWrap>
       <TeamWrap>
         {participantIdentities
-          .filter(({ participantId }) => redTeamPlayerIds.includes(participantId))
+          .filter(({ participantId }) => RED_TEAM_PLAYER_IDS.includes(participantId))
           .map((participantIdentity) => (
             <GamePlayersItem
               participants={participants}

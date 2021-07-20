@@ -29,7 +29,13 @@ export const VICTORY_OR_DEFEAT = {
   Fail: '패배',
 };
 
+export const BLUE_TEAM_ID = 100;
+export const RED_TEAM_ID = 200;
+
 export const SELECTED_TEAM = {
   100: '0',
   200: '1',
 };
+
+export const BLUE_TEAM_PLAYER_IDS = [1, 2, 3, 4, 5];
+export const RED_TEAM_PLAYER_IDS = [6, 7, 8, 9, 10];
