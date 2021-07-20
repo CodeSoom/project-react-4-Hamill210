@@ -33,21 +33,21 @@ const GamePlayTimeWrap = styled.div({
   cursor: 'help',
 });
 
-const Bar = styled.div(({ win }) => ({
+const Bar = styled.div(({ isWin }) => ({
   display: 'block',
   width: '27px',
   height: '2px',
   margin: '5px auto',
-  background: win === 'Win' ? '#99b9cf' : '#cea7a7',
+  background: isWin ? '#99b9cf' : '#cea7a7',
 }));
 
-const WinLoseWrap = styled.div(({ win }) => ({
+const WinLoseWrap = styled.div(({ isWin }) => ({
   fontWeight: 'bold',
-  color: win === 'Win' ? '#1a78ae' : '#c6443e',
+  color: isWin ? '#1a78ae' : '#c6443e',
 }));
 
 function GameTypeInfo({
-  queueId, gameCreation, gameTime, win,
+  queueId, gameCreation, gameTime, win, isWin,
 }) {
   const now = new Date().getTime();
   const gamePlayTime = `${new Date(gameTime).getMinutes()}분 ${new Date(gameTime).getSeconds()}초`;
@@ -62,8 +62,8 @@ function GameTypeInfo({
           {getFormattedTimeDifference(now - (gameCreation + gameTime))}
         </GamePlayTimeWrap>
       </div>
-      <Bar win={win} />
-      <WinLoseWrap win={win}>
+      <Bar isWin={isWin} />
+      <WinLoseWrap isWin={isWin}>
         {VICTORY_OR_DEFEAT[win]}
       </WinLoseWrap>
       <div>

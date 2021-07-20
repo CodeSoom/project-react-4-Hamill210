@@ -18,14 +18,14 @@ const TeamWrap = styled.div({
 });
 
 function GamePlayers({ participants, participantIdentities }) {
-  const blueTeam = [1, 2, 3, 4, 5];
-  const redTeam = [6, 7, 8, 9, 10];
+  const blueTeamPlayerIds = [1, 2, 3, 4, 5];
+  const redTeamPlayerIds = [6, 7, 8, 9, 10];
 
   return (
     <PlayersWrap>
       <TeamWrap>
         {participantIdentities
-          .filter(({ participantId }) => blueTeam.includes(participantId))
+          .filter(({ participantId }) => blueTeamPlayerIds.includes(participantId))
           .map((participantIdentity) => (
             <GamePlayersItem
               participants={participants}
@@ -35,7 +35,7 @@ function GamePlayers({ participants, participantIdentities }) {
       </TeamWrap>
       <TeamWrap>
         {participantIdentities
-          .filter(({ participantId }) => redTeam.includes(participantId))
+          .filter(({ participantId }) => redTeamPlayerIds.includes(participantId))
           .map((participantIdentity) => (
             <GamePlayersItem
               participants={participants}
