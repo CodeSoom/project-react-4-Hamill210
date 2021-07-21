@@ -43,22 +43,22 @@ const RankWinLose = styled.span({
   fontWeight: '500',
 });
 
-function PlayerRankInfo({ ranks, title }) {
-  const defaultRanks = {
-    tier: 'UNRANKED',
-    rank: '',
-    leaguePoints: 0,
-    wins: 0,
-    losses: 0,
-  };
+const defaultRanks = {
+  tier: 'UNRANKED',
+  rank: '',
+  leaguePoints: 0,
+  wins: 0,
+  losses: 0,
+};
 
+function PlayerRankInfo({ ranks = defaultRanks, title }) {
   const {
     tier,
     rank,
     leaguePoints,
     wins,
     losses,
-  } = ranks || defaultRanks;
+  } = ranks;
 
   return (
     <RankBox>
