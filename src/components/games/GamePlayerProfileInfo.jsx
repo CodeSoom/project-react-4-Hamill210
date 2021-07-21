@@ -79,7 +79,7 @@ const SubRuneIconImg = styled.img({
 
 const ChampionNameDiv = styled.div({
   marginTop: '-4px',
-  padding: '9px',
+  padding: '14px',
   fontSize: '13px',
   color: '#555',
   textAlign: 'center',
