@@ -18,20 +18,30 @@ function SearchBox({ userName, onChangeValue, onClickSearchPlayer }) {
 
   return (
     <Styled.Div.Container>
-      <input
-        ref={inputRef}
-        type="text"
-        placeholder="소환사명을 입력하세요."
-        value={userName}
-        onChange={handleChange}
-        onKeyPress={handleKeyPressEnter}
-      />
-      <button
-        type="button"
-        onClick={onClickSearchPlayer}
-      >
-        검색
-      </button>
+      <Styled.Div.CountryContent>
+        <Styled.Span.Country>
+          KR
+        </Styled.Span.Country>
+      </Styled.Div.CountryContent>
+      <div>
+        <Styled.Input.TextArea
+          ref={inputRef}
+          type="text"
+          placeholder="소환사명을 입력하세요."
+          value={userName}
+          onChange={handleChange}
+          onKeyPress={handleKeyPressEnter}
+        />
+        <Styled.Button.SearchBtn
+          type="button"
+          onClick={onClickSearchPlayer}
+        >
+          <Styled.Img.SearchImg
+            src="https://opgg-static.akamaized.net/images/gnb/svg/00-icon-gg.svg"
+            alt="Search Button"
+          />
+        </Styled.Button.SearchBtn>
+      </div>
     </Styled.Div.Container>
   );
 }
