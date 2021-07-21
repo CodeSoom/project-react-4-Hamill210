@@ -29,6 +29,9 @@ function PlayerInfo({
           <Styled.H1.UserName>
             {name}
           </Styled.H1.UserName>
+          <Styled.Button.UpdateUserInfo type="button">
+            전적 갱신
+          </Styled.Button.UpdateUserInfo>
         </Styled.Div.UserNameContent>
       </Styled.Div.ProfileContainer>
       <Styled.Div.RankContainer>
