@@ -1,12 +1,13 @@
 import { memo } from 'react';
-
 import * as Styled from './style';
+
 import PlayerRankInfo from './PlayerRankInfo';
 
 function PlayerInfo({
   summoner,
   soloRank,
   subRank,
+  onClickUpdateUserInfo,
 }) {
   const { name, profileIconId } = summoner;
 
@@ -29,6 +30,12 @@ function PlayerInfo({
           <Styled.H1.UserName>
             {name}
           </Styled.H1.UserName>
+          <Styled.Button.UpdateUserInfo
+            type="button"
+            onClick={onClickUpdateUserInfo}
+          >
+            전적 갱신
+          </Styled.Button.UpdateUserInfo>
         </Styled.Div.UserNameContent>
       </Styled.Div.ProfileContainer>
       <Styled.Div.RankContainer>

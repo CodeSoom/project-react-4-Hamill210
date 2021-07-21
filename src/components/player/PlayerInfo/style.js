@@ -40,3 +40,16 @@ export const H1 = {
     textAlign: 'left',
   }),
 };
+
+export const Button = {
+  UpdateUserInfo: styled.button({
+    width: '120px',
+    padding: '14px 26px',
+    marginTop: '10px',
+    border: '1px solid #1a78ae',
+    background: '#1f8ecd',
+    color: '#f2f2f2',
+    fontSize: '16px',
+    cursor: 'pointer',
+  }),
+};
