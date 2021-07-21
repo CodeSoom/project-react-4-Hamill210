@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const Div = {
   Container: styled.div({
     display: 'grid',
-    gridTemplateColumns: 'auto 300px',
+    gridTemplateColumns: 'auto 350px',
     backgroundColor: '#5383e8',
     padding: '20px 40px 20px 40px',
     alignItems: 'center',
