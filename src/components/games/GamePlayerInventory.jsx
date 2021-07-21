@@ -76,13 +76,17 @@ function GamePlayerInventory({ isWin, stats }) {
   return (
     <InventoryWrap>
       <ItemListDiv>
-        {itemList.map((item) => (
-          <ItemDiv isWin={isWin}>
-            {item
-              ? <ItemImg src={`https://ddragon.leagueoflegends.com/cdn/11.14.1/img/item/${item}.png`} alt={`ItemId-${item}`} />
-              : <NoItemDiv />}
-          </ItemDiv>
-        ))}
+        {itemList.map((item, index) => {
+          const key = `item-${item}-${index}`;
+
+          return (
+            <ItemDiv key={key} isWin={isWin}>
+              {item
+                ? <ItemImg src={`https://ddragon.leagueoflegends.com/cdn/11.14.1/img/item/${item}.png`} alt={`ItemId-${item}`} />
+                : <NoItemDiv />}
+            </ItemDiv>
+          );
+        })}
         <ItemBtn type="button">
           <ItemPocketImg
             src={`https://opgg-static.akamaized.net/css3/sprite/images/${isWin ? 'icon-buildblue-p.png' : 'icon-buildred-p.png'}`}

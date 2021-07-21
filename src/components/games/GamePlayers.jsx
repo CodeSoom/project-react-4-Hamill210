@@ -26,6 +26,7 @@ function GamePlayers({ participants, participantIdentities }) {
           .filter(({ participantId }) => BLUE_TEAM_PLAYER_IDS.includes(participantId))
           .map((participantIdentity) => (
             <GamePlayersItem
+              key={participantIdentity.participantId}
               participants={participants}
               participantIdentity={participantIdentity}
             />
