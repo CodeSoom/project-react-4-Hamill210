@@ -20,7 +20,7 @@ const GameTypeWrap = styled.div({
   height: 'auto',
   lineHeight: '22px',
   color: '#555',
-  fontSize: '14px',
+  fontSize: '12px',
   textAlign: 'center',
   justifyContent: 'center',
   alignSelf: 'center',
