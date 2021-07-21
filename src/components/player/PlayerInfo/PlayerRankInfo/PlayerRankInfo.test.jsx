@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import PlayerRankInfo from './PlayerRankInfo';
 
-import RANKS from '../../../fixtures/ranks';
+import RANKS from '../../../../../fixtures/ranks';
 
 describe('PlayerRankInfo', () => {
   it('renders', () => {
