@@ -52,7 +52,7 @@ function GamePlayersItem({ participants, participantIdentity }) {
     <PlayerDiv>
       <ChampionIconWrap>
         <ChampionIconImg
-          src={`https://ddragon.leagueoflegends.com/cdn/11.14.1/img/champion/${champion.image.full}`}
+          src={`https://ddragon.leagueoflegends.com/cdn/11.15.1/img/champion/${champion.image.full}`}
           alt={champion.name}
         />
       </ChampionIconWrap>

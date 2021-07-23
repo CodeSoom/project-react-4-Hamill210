@@ -1,5 +1,5 @@
-// 20210718011843
-// https://ddragon.leagueoflegends.com/cdn/11.14.1/data/ko_KR/champion.json
+// 20210723230639
+// https://ddragon.leagueoflegends.com/cdn/11.15.1/data/ko_KR/champion.json
 
 /* eslint-disable comma-dangle */
 /* eslint-disable quote-props */
@@ -7,10 +7,10 @@
 const champion = {
   "type": "champion",
   "format": "standAloneComplex",
-  "version": "11.14.1",
+  "version": "11.15.1",
   "data": {
     "Aatrox": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Aatrox",
       "key": "266",
       "name": "아트록스",
@@ -60,7 +60,7 @@ const champion = {
       }
     },
     "Ahri": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Ahri",
       "key": "103",
       "name": "아리",
@@ -110,7 +110,7 @@ const champion = {
       }
     },
     "Akali": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Akali",
       "key": "84",
       "name": "아칼리",
@@ -158,8 +158,58 @@ const champion = {
         "attackspeed": 0.625
       }
     },
+    "Akshan": {
+      "version": "11.15.1",
+      "id": "Akshan",
+      "key": "166",
+      "name": "아크샨",
+      "title": "떠도는 감시자",
+      "blurb": "상반신을 드러낸 아크샨은 위험에 직면하면 눈썹을 치켜올리며 당당한 카리스마, 정의로운 복수심으로 악과 맞서 싸운다. 전투에서 뛰어난 은신술을 발휘하며 적의 눈을 피한 후 제일 예기치 못한 순간 다시 모습을 드러낸다. 불타는 정의감과 죽음을 되돌리는 전설적인 무기로 룬테라의 수많은 악한들이 저지른 잘못을 바로잡으며 '멍청이가 되지 말자'라는 자신만의 도덕적 기준에 따라 살아간다.",
+      "info": {
+        "attack": 0,
+        "defense": 0,
+        "magic": 0,
+        "difficulty": 0
+      },
+      "image": {
+        "full": "Akshan.png",
+        "sprite": "champion0.png",
+        "group": "champion",
+        "x": 144,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "tags": [
+        "Marksman",
+        "Assassin"
+      ],
+      "partype": "마나",
+      "stats": {
+        "hp": 530,
+        "hpperlevel": 90,
+        "mp": 350,
+        "mpperlevel": 40,
+        "movespeed": 330,
+        "armor": 26,
+        "armorperlevel": 3,
+        "spellblock": 30,
+        "spellblockperlevel": 0.5,
+        "attackrange": 500,
+        "hpregen": 3.75,
+        "hpregenperlevel": 0.65,
+        "mpregen": 8.175,
+        "mpregenperlevel": 0.7,
+        "crit": 0,
+        "critperlevel": 0,
+        "attackdamage": 50,
+        "attackdamageperlevel": 3.5,
+        "attackspeedperlevel": 2.5,
+        "attackspeed": 0.638
+      }
+    },
     "Alistar": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Alistar",
       "key": "12",
       "name": "알리스타",
@@ -175,7 +225,7 @@ const champion = {
         "full": "Alistar.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 0,
         "w": 48,
         "h": 48
@@ -209,7 +259,7 @@ const champion = {
       }
     },
     "Amumu": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Amumu",
       "key": "32",
       "name": "아무무",
@@ -225,7 +275,7 @@ const champion = {
         "full": "Amumu.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 0,
         "w": 48,
         "h": 48
@@ -259,7 +309,7 @@ const champion = {
       }
     },
     "Anivia": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Anivia",
       "key": "34",
       "name": "애니비아",
@@ -275,7 +325,7 @@ const champion = {
         "full": "Anivia.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 240,
+        "x": 288,
         "y": 0,
         "w": 48,
         "h": 48
@@ -309,7 +359,7 @@ const champion = {
       }
     },
     "Annie": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Annie",
       "key": "1",
       "name": "애니",
@@ -325,7 +375,7 @@ const champion = {
         "full": "Annie.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 288,
+        "x": 336,
         "y": 0,
         "w": 48,
         "h": 48
@@ -358,7 +408,7 @@ const champion = {
       }
     },
     "Aphelios": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Aphelios",
       "key": "523",
       "name": "아펠리오스",
@@ -374,7 +424,7 @@ const champion = {
         "full": "Aphelios.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 336,
+        "x": 384,
         "y": 0,
         "w": 48,
         "h": 48
@@ -407,7 +457,7 @@ const champion = {
       }
     },
     "Ashe": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Ashe",
       "key": "22",
       "name": "애쉬",
@@ -423,7 +473,7 @@ const champion = {
         "full": "Ashe.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 384,
+        "x": 432,
         "y": 0,
         "w": 48,
         "h": 48
@@ -457,7 +507,7 @@ const champion = {
       }
     },
     "AurelionSol": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "AurelionSol",
       "key": "136",
       "name": "아우렐리온 솔",
@@ -473,8 +523,8 @@ const champion = {
         "full": "AurelionSol.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 432,
-        "y": 0,
+        "x": 0,
+        "y": 48,
         "w": 48,
         "h": 48
       },
@@ -506,7 +556,7 @@ const champion = {
       }
     },
     "Azir": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Azir",
       "key": "268",
       "name": "아지르",
@@ -522,7 +572,7 @@ const champion = {
         "full": "Azir.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 0,
+        "x": 48,
         "y": 48,
         "w": 48,
         "h": 48
@@ -556,7 +606,7 @@ const champion = {
       }
     },
     "Bard": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Bard",
       "key": "432",
       "name": "바드",
@@ -572,7 +622,7 @@ const champion = {
         "full": "Bard.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 48,
+        "x": 96,
         "y": 48,
         "w": 48,
         "h": 48
@@ -606,7 +656,7 @@ const champion = {
       }
     },
     "Blitzcrank": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Blitzcrank",
       "key": "53",
       "name": "블리츠크랭크",
@@ -622,7 +672,7 @@ const champion = {
         "full": "Blitzcrank.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 96,
+        "x": 144,
         "y": 48,
         "w": 48,
         "h": 48
@@ -638,7 +688,7 @@ const champion = {
         "mp": 267,
         "mpperlevel": 40,
         "movespeed": 325,
-        "armor": 37,
+        "armor": 40,
         "armorperlevel": 3.5,
         "spellblock": 32,
         "spellblockperlevel": 1.25,
@@ -656,7 +706,7 @@ const champion = {
       }
     },
     "Brand": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Brand",
       "key": "63",
       "name": "브랜드",
@@ -672,7 +722,7 @@ const champion = {
         "full": "Brand.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 48,
         "w": 48,
         "h": 48
@@ -705,7 +755,7 @@ const champion = {
       }
     },
     "Braum": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Braum",
       "key": "201",
       "name": "브라움",
@@ -721,7 +771,7 @@ const champion = {
         "full": "Braum.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 48,
         "w": 48,
         "h": 48
@@ -755,7 +805,7 @@ const champion = {
       }
     },
     "Caitlyn": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Caitlyn",
       "key": "51",
       "name": "케이틀린",
@@ -771,7 +821,7 @@ const champion = {
         "full": "Caitlyn.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 240,
+        "x": 288,
         "y": 48,
         "w": 48,
         "h": 48
@@ -804,7 +854,7 @@ const champion = {
       }
     },
     "Camille": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Camille",
       "key": "164",
       "name": "카밀",
@@ -820,7 +870,7 @@ const champion = {
         "full": "Camille.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 288,
+        "x": 336,
         "y": 48,
         "w": 48,
         "h": 48
@@ -854,7 +904,7 @@ const champion = {
       }
     },
     "Cassiopeia": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Cassiopeia",
       "key": "69",
       "name": "카시오페아",
@@ -870,7 +920,7 @@ const champion = {
         "full": "Cassiopeia.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 336,
+        "x": 384,
         "y": 48,
         "w": 48,
         "h": 48
@@ -903,7 +953,7 @@ const champion = {
       }
     },
     "Chogath": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Chogath",
       "key": "31",
       "name": "초가스",
@@ -919,7 +969,7 @@ const champion = {
         "full": "Chogath.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 384,
+        "x": 432,
         "y": 48,
         "w": 48,
         "h": 48
@@ -953,7 +1003,7 @@ const champion = {
       }
     },
     "Corki": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Corki",
       "key": "42",
       "name": "코르키",
@@ -969,8 +1019,8 @@ const champion = {
         "full": "Corki.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 432,
-        "y": 48,
+        "x": 0,
+        "y": 96,
         "w": 48,
         "h": 48
       },
@@ -1002,7 +1052,7 @@ const champion = {
       }
     },
     "Darius": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Darius",
       "key": "122",
       "name": "다리우스",
@@ -1018,7 +1068,7 @@ const champion = {
         "full": "Darius.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 0,
+        "x": 48,
         "y": 96,
         "w": 48,
         "h": 48
@@ -1052,7 +1102,7 @@ const champion = {
       }
     },
     "Diana": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Diana",
       "key": "131",
       "name": "다이애나",
@@ -1068,7 +1118,7 @@ const champion = {
         "full": "Diana.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 48,
+        "x": 96,
         "y": 96,
         "w": 48,
         "h": 48
@@ -1102,7 +1152,7 @@ const champion = {
       }
     },
     "Draven": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Draven",
       "key": "119",
       "name": "드레이븐",
@@ -1118,7 +1168,7 @@ const champion = {
         "full": "Draven.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 96,
+        "x": 144,
         "y": 96,
         "w": 48,
         "h": 48
@@ -1151,7 +1201,7 @@ const champion = {
       }
     },
     "DrMundo": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "DrMundo",
       "key": "36",
       "name": "문도 박사",
@@ -1167,7 +1217,7 @@ const champion = {
         "full": "DrMundo.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 96,
         "w": 48,
         "h": 48
@@ -1201,7 +1251,7 @@ const champion = {
       }
     },
     "Ekko": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Ekko",
       "key": "245",
       "name": "에코",
@@ -1217,7 +1267,7 @@ const champion = {
         "full": "Ekko.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 96,
         "w": 48,
         "h": 48
@@ -1251,7 +1301,7 @@ const champion = {
       }
     },
     "Elise": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Elise",
       "key": "60",
       "name": "엘리스",
@@ -1267,7 +1317,7 @@ const champion = {
         "full": "Elise.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 240,
+        "x": 288,
         "y": 96,
         "w": 48,
         "h": 48
@@ -1301,7 +1351,7 @@ const champion = {
       }
     },
     "Evelynn": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Evelynn",
       "key": "28",
       "name": "이블린",
@@ -1317,7 +1367,7 @@ const champion = {
         "full": "Evelynn.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 288,
+        "x": 336,
         "y": 96,
         "w": 48,
         "h": 48
@@ -1351,7 +1401,7 @@ const champion = {
       }
     },
     "Ezreal": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Ezreal",
       "key": "81",
       "name": "이즈리얼",
@@ -1367,7 +1417,7 @@ const champion = {
         "full": "Ezreal.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 336,
+        "x": 384,
         "y": 96,
         "w": 48,
         "h": 48
@@ -1401,7 +1451,7 @@ const champion = {
       }
     },
     "Fiddlesticks": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Fiddlesticks",
       "key": "9",
       "name": "피들스틱",
@@ -1417,7 +1467,7 @@ const champion = {
         "full": "Fiddlesticks.png",
         "sprite": "champion0.png",
         "group": "champion",
-        "x": 384,
+        "x": 432,
         "y": 96,
         "w": 48,
         "h": 48
@@ -1451,7 +1501,7 @@ const champion = {
       }
     },
     "Fiora": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Fiora",
       "key": "114",
       "name": "피오라",
@@ -1465,10 +1515,10 @@ const champion = {
       },
       "image": {
         "full": "Fiora.png",
-        "sprite": "champion0.png",
+        "sprite": "champion1.png",
         "group": "champion",
-        "x": 432,
-        "y": 96,
+        "x": 0,
+        "y": 0,
         "w": 48,
         "h": 48
       },
@@ -1501,7 +1551,7 @@ const champion = {
       }
     },
     "Fizz": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Fizz",
       "key": "105",
       "name": "피즈",
@@ -1517,7 +1567,7 @@ const champion = {
         "full": "Fizz.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 0,
+        "x": 48,
         "y": 0,
         "w": 48,
         "h": 48
@@ -1551,7 +1601,7 @@ const champion = {
       }
     },
     "Galio": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Galio",
       "key": "3",
       "name": "갈리오",
@@ -1567,7 +1617,7 @@ const champion = {
         "full": "Galio.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 48,
+        "x": 96,
         "y": 0,
         "w": 48,
         "h": 48
@@ -1601,7 +1651,7 @@ const champion = {
       }
     },
     "Gangplank": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Gangplank",
       "key": "41",
       "name": "갱플랭크",
@@ -1617,7 +1667,7 @@ const champion = {
         "full": "Gangplank.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 96,
+        "x": 144,
         "y": 0,
         "w": 48,
         "h": 48
@@ -1650,7 +1700,7 @@ const champion = {
       }
     },
     "Garen": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Garen",
       "key": "86",
       "name": "가렌",
@@ -1666,7 +1716,7 @@ const champion = {
         "full": "Garen.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 0,
         "w": 48,
         "h": 48
@@ -1700,7 +1750,7 @@ const champion = {
       }
     },
     "Gnar": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Gnar",
       "key": "150",
       "name": "나르",
@@ -1716,7 +1766,7 @@ const champion = {
         "full": "Gnar.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 0,
         "w": 48,
         "h": 48
@@ -1750,7 +1800,7 @@ const champion = {
       }
     },
     "Gragas": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Gragas",
       "key": "79",
       "name": "그라가스",
@@ -1766,7 +1816,7 @@ const champion = {
         "full": "Gragas.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 240,
+        "x": 288,
         "y": 0,
         "w": 48,
         "h": 48
@@ -1800,7 +1850,7 @@ const champion = {
       }
     },
     "Graves": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Graves",
       "key": "104",
       "name": "그레이브즈",
@@ -1816,7 +1866,7 @@ const champion = {
         "full": "Graves.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 288,
+        "x": 336,
         "y": 0,
         "w": 48,
         "h": 48
@@ -1849,7 +1899,7 @@ const champion = {
       }
     },
     "Gwen": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Gwen",
       "key": "887",
       "name": "그웬",
@@ -1865,7 +1915,7 @@ const champion = {
         "full": "Gwen.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 336,
+        "x": 384,
         "y": 0,
         "w": 48,
         "h": 48
@@ -1899,7 +1949,7 @@ const champion = {
       }
     },
     "Hecarim": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Hecarim",
       "key": "120",
       "name": "헤카림",
@@ -1915,7 +1965,7 @@ const champion = {
         "full": "Hecarim.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 384,
+        "x": 432,
         "y": 0,
         "w": 48,
         "h": 48
@@ -1949,7 +1999,7 @@ const champion = {
       }
     },
     "Heimerdinger": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Heimerdinger",
       "key": "74",
       "name": "하이머딩거",
@@ -1965,8 +2015,8 @@ const champion = {
         "full": "Heimerdinger.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 432,
-        "y": 0,
+        "x": 0,
+        "y": 48,
         "w": 48,
         "h": 48
       },
@@ -1999,7 +2049,7 @@ const champion = {
       }
     },
     "Illaoi": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Illaoi",
       "key": "420",
       "name": "일라오이",
@@ -2015,7 +2065,7 @@ const champion = {
         "full": "Illaoi.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 0,
+        "x": 48,
         "y": 48,
         "w": 48,
         "h": 48
@@ -2049,7 +2099,7 @@ const champion = {
       }
     },
     "Irelia": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Irelia",
       "key": "39",
       "name": "이렐리아",
@@ -2065,7 +2115,7 @@ const champion = {
         "full": "Irelia.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 48,
+        "x": 96,
         "y": 48,
         "w": 48,
         "h": 48
@@ -2099,7 +2149,7 @@ const champion = {
       }
     },
     "Ivern": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Ivern",
       "key": "427",
       "name": "아이번",
@@ -2115,7 +2165,7 @@ const champion = {
         "full": "Ivern.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 96,
+        "x": 144,
         "y": 48,
         "w": 48,
         "h": 48
@@ -2149,7 +2199,7 @@ const champion = {
       }
     },
     "Janna": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Janna",
       "key": "40",
       "name": "잔나",
@@ -2165,7 +2215,7 @@ const champion = {
         "full": "Janna.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 48,
         "w": 48,
         "h": 48
@@ -2199,7 +2249,7 @@ const champion = {
       }
     },
     "JarvanIV": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "JarvanIV",
       "key": "59",
       "name": "자르반 4세",
@@ -2215,7 +2265,7 @@ const champion = {
         "full": "JarvanIV.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 48,
         "w": 48,
         "h": 48
@@ -2249,7 +2299,7 @@ const champion = {
       }
     },
     "Jax": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Jax",
       "key": "24",
       "name": "잭스",
@@ -2265,7 +2315,7 @@ const champion = {
         "full": "Jax.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 240,
+        "x": 288,
         "y": 48,
         "w": 48,
         "h": 48
@@ -2299,7 +2349,7 @@ const champion = {
       }
     },
     "Jayce": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Jayce",
       "key": "126",
       "name": "제이스",
@@ -2315,7 +2365,7 @@ const champion = {
         "full": "Jayce.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 288,
+        "x": 336,
         "y": 48,
         "w": 48,
         "h": 48
@@ -2349,7 +2399,7 @@ const champion = {
       }
     },
     "Jhin": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Jhin",
       "key": "202",
       "name": "진",
@@ -2365,7 +2415,7 @@ const champion = {
         "full": "Jhin.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 336,
+        "x": 384,
         "y": 48,
         "w": 48,
         "h": 48
@@ -2399,7 +2449,7 @@ const champion = {
       }
     },
     "Jinx": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Jinx",
       "key": "222",
       "name": "징크스",
@@ -2415,7 +2465,7 @@ const champion = {
         "full": "Jinx.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 384,
+        "x": 432,
         "y": 48,
         "w": 48,
         "h": 48
@@ -2448,7 +2498,7 @@ const champion = {
       }
     },
     "Kaisa": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Kaisa",
       "key": "145",
       "name": "카이사",
@@ -2464,8 +2514,8 @@ const champion = {
         "full": "Kaisa.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 432,
-        "y": 48,
+        "x": 0,
+        "y": 96,
         "w": 48,
         "h": 48
       },
@@ -2497,7 +2547,7 @@ const champion = {
       }
     },
     "Kalista": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Kalista",
       "key": "429",
       "name": "칼리스타",
@@ -2513,7 +2563,7 @@ const champion = {
         "full": "Kalista.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 0,
+        "x": 48,
         "y": 96,
         "w": 48,
         "h": 48
@@ -2546,7 +2596,7 @@ const champion = {
       }
     },
     "Karma": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Karma",
       "key": "43",
       "name": "카르마",
@@ -2562,7 +2612,7 @@ const champion = {
         "full": "Karma.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 48,
+        "x": 96,
         "y": 96,
         "w": 48,
         "h": 48
@@ -2596,7 +2646,7 @@ const champion = {
       }
     },
     "Karthus": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Karthus",
       "key": "30",
       "name": "카서스",
@@ -2612,7 +2662,7 @@ const champion = {
         "full": "Karthus.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 96,
+        "x": 144,
         "y": 96,
         "w": 48,
         "h": 48
@@ -2645,7 +2695,7 @@ const champion = {
       }
     },
     "Kassadin": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Kassadin",
       "key": "38",
       "name": "카사딘",
@@ -2661,7 +2711,7 @@ const champion = {
         "full": "Kassadin.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 96,
         "w": 48,
         "h": 48
@@ -2695,7 +2745,7 @@ const champion = {
       }
     },
     "Katarina": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Katarina",
       "key": "55",
       "name": "카타리나",
@@ -2711,7 +2761,7 @@ const champion = {
         "full": "Katarina.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 96,
         "w": 48,
         "h": 48
@@ -2745,7 +2795,7 @@ const champion = {
       }
     },
     "Kayle": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Kayle",
       "key": "10",
       "name": "케일",
@@ -2761,7 +2811,7 @@ const champion = {
         "full": "Kayle.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 240,
+        "x": 288,
         "y": 96,
         "w": 48,
         "h": 48
@@ -2779,7 +2829,7 @@ const champion = {
         "movespeed": 335,
         "armor": 26,
         "armorperlevel": 3,
-        "spellblock": 30,
+        "spellblock": 26,
         "spellblockperlevel": 0.5,
         "attackrange": 175,
         "hpregen": 5,
@@ -2795,7 +2845,7 @@ const champion = {
       }
     },
     "Kayn": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Kayn",
       "key": "141",
       "name": "케인",
@@ -2811,7 +2861,7 @@ const champion = {
         "full": "Kayn.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 288,
+        "x": 336,
         "y": 96,
         "w": 48,
         "h": 48
@@ -2845,7 +2895,7 @@ const champion = {
       }
     },
     "Kennen": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Kennen",
       "key": "85",
       "name": "케넨",
@@ -2861,7 +2911,7 @@ const champion = {
         "full": "Kennen.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 336,
+        "x": 384,
         "y": 96,
         "w": 48,
         "h": 48
@@ -2895,7 +2945,7 @@ const champion = {
       }
     },
     "Khazix": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Khazix",
       "key": "121",
       "name": "카직스",
@@ -2911,7 +2961,7 @@ const champion = {
         "full": "Khazix.png",
         "sprite": "champion1.png",
         "group": "champion",
-        "x": 384,
+        "x": 432,
         "y": 96,
         "w": 48,
         "h": 48
@@ -2944,7 +2994,7 @@ const champion = {
       }
     },
     "Kindred": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Kindred",
       "key": "203",
       "name": "킨드레드",
@@ -2958,10 +3008,10 @@ const champion = {
       },
       "image": {
         "full": "Kindred.png",
-        "sprite": "champion1.png",
+        "sprite": "champion2.png",
         "group": "champion",
-        "x": 432,
-        "y": 96,
+        "x": 0,
+        "y": 0,
         "w": 48,
         "h": 48
       },
@@ -2993,7 +3043,7 @@ const champion = {
       }
     },
     "Kled": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Kled",
       "key": "240",
       "name": "클레드",
@@ -3009,7 +3059,7 @@ const champion = {
         "full": "Kled.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 0,
+        "x": 48,
         "y": 0,
         "w": 48,
         "h": 48
@@ -3043,7 +3093,7 @@ const champion = {
       }
     },
     "KogMaw": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "KogMaw",
       "key": "96",
       "name": "코그모",
@@ -3059,7 +3109,7 @@ const champion = {
         "full": "KogMaw.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 48,
+        "x": 96,
         "y": 0,
         "w": 48,
         "h": 48
@@ -3093,7 +3143,7 @@ const champion = {
       }
     },
     "Leblanc": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Leblanc",
       "key": "7",
       "name": "르블랑",
@@ -3109,7 +3159,7 @@ const champion = {
         "full": "Leblanc.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 96,
+        "x": 144,
         "y": 0,
         "w": 48,
         "h": 48
@@ -3143,7 +3193,7 @@ const champion = {
       }
     },
     "LeeSin": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "LeeSin",
       "key": "64",
       "name": "리 신",
@@ -3159,7 +3209,7 @@ const champion = {
         "full": "LeeSin.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 0,
         "w": 48,
         "h": 48
@@ -3193,7 +3243,7 @@ const champion = {
       }
     },
     "Leona": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Leona",
       "key": "89",
       "name": "레오나",
@@ -3209,7 +3259,7 @@ const champion = {
         "full": "Leona.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 0,
         "w": 48,
         "h": 48
@@ -3243,7 +3293,7 @@ const champion = {
       }
     },
     "Lillia": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Lillia",
       "key": "876",
       "name": "릴리아",
@@ -3259,7 +3309,7 @@ const champion = {
         "full": "Lillia.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 240,
+        "x": 288,
         "y": 0,
         "w": 48,
         "h": 48
@@ -3293,7 +3343,7 @@ const champion = {
       }
     },
     "Lissandra": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Lissandra",
       "key": "127",
       "name": "리산드라",
@@ -3309,7 +3359,7 @@ const champion = {
         "full": "Lissandra.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 288,
+        "x": 336,
         "y": 0,
         "w": 48,
         "h": 48
@@ -3342,7 +3392,7 @@ const champion = {
       }
     },
     "Lucian": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Lucian",
       "key": "236",
       "name": "루시안",
@@ -3358,7 +3408,7 @@ const champion = {
         "full": "Lucian.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 336,
+        "x": 384,
         "y": 0,
         "w": 48,
         "h": 48
@@ -3391,7 +3441,7 @@ const champion = {
       }
     },
     "Lulu": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Lulu",
       "key": "117",
       "name": "룰루",
@@ -3407,7 +3457,7 @@ const champion = {
         "full": "Lulu.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 384,
+        "x": 432,
         "y": 0,
         "w": 48,
         "h": 48
@@ -3441,7 +3491,7 @@ const champion = {
       }
     },
     "Lux": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Lux",
       "key": "99",
       "name": "럭스",
@@ -3457,8 +3507,8 @@ const champion = {
         "full": "Lux.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 432,
-        "y": 0,
+        "x": 0,
+        "y": 48,
         "w": 48,
         "h": 48
       },
@@ -3491,7 +3541,7 @@ const champion = {
       }
     },
     "Malphite": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Malphite",
       "key": "54",
       "name": "말파이트",
@@ -3507,7 +3557,7 @@ const champion = {
         "full": "Malphite.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 0,
+        "x": 48,
         "y": 48,
         "w": 48,
         "h": 48
@@ -3541,7 +3591,7 @@ const champion = {
       }
     },
     "Malzahar": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Malzahar",
       "key": "90",
       "name": "말자하",
@@ -3557,7 +3607,7 @@ const champion = {
         "full": "Malzahar.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 48,
+        "x": 96,
         "y": 48,
         "w": 48,
         "h": 48
@@ -3591,7 +3641,7 @@ const champion = {
       }
     },
     "Maokai": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Maokai",
       "key": "57",
       "name": "마오카이",
@@ -3607,7 +3657,7 @@ const champion = {
         "full": "Maokai.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 96,
+        "x": 144,
         "y": 48,
         "w": 48,
         "h": 48
@@ -3641,7 +3691,7 @@ const champion = {
       }
     },
     "MasterYi": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "MasterYi",
       "key": "11",
       "name": "마스터 이",
@@ -3657,7 +3707,7 @@ const champion = {
         "full": "MasterYi.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 48,
         "w": 48,
         "h": 48
@@ -3691,7 +3741,7 @@ const champion = {
       }
     },
     "MissFortune": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "MissFortune",
       "key": "21",
       "name": "미스 포츈",
@@ -3707,7 +3757,7 @@ const champion = {
         "full": "MissFortune.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 48,
         "w": 48,
         "h": 48
@@ -3740,7 +3790,7 @@ const champion = {
       }
     },
     "MonkeyKing": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "MonkeyKing",
       "key": "62",
       "name": "오공",
@@ -3756,7 +3806,7 @@ const champion = {
         "full": "MonkeyKing.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 240,
+        "x": 288,
         "y": 48,
         "w": 48,
         "h": 48
@@ -3777,7 +3827,7 @@ const champion = {
         "spellblock": 28,
         "spellblockperlevel": 1.25,
         "attackrange": 175,
-        "hpregen": 4,
+        "hpregen": 2.5,
         "hpregenperlevel": 0.65,
         "mpregen": 8,
         "mpregenperlevel": 0.65,
@@ -3790,7 +3840,7 @@ const champion = {
       }
     },
     "Mordekaiser": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Mordekaiser",
       "key": "82",
       "name": "모데카이저",
@@ -3806,7 +3856,7 @@ const champion = {
         "full": "Mordekaiser.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 288,
+        "x": 336,
         "y": 48,
         "w": 48,
         "h": 48
@@ -3839,7 +3889,7 @@ const champion = {
       }
     },
     "Morgana": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Morgana",
       "key": "25",
       "name": "모르가나",
@@ -3855,7 +3905,7 @@ const champion = {
         "full": "Morgana.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 336,
+        "x": 384,
         "y": 48,
         "w": 48,
         "h": 48
@@ -3889,7 +3939,7 @@ const champion = {
       }
     },
     "Nami": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Nami",
       "key": "267",
       "name": "나미",
@@ -3905,7 +3955,7 @@ const champion = {
         "full": "Nami.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 384,
+        "x": 432,
         "y": 48,
         "w": 48,
         "h": 48
@@ -3939,7 +3989,7 @@ const champion = {
       }
     },
     "Nasus": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Nasus",
       "key": "75",
       "name": "나서스",
@@ -3955,8 +4005,8 @@ const champion = {
         "full": "Nasus.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 432,
-        "y": 48,
+        "x": 0,
+        "y": 96,
         "w": 48,
         "h": 48
       },
@@ -3989,7 +4039,7 @@ const champion = {
       }
     },
     "Nautilus": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Nautilus",
       "key": "111",
       "name": "노틸러스",
@@ -4005,7 +4055,7 @@ const champion = {
         "full": "Nautilus.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 0,
+        "x": 48,
         "y": 96,
         "w": 48,
         "h": 48
@@ -4039,7 +4089,7 @@ const champion = {
       }
     },
     "Neeko": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Neeko",
       "key": "518",
       "name": "니코",
@@ -4055,7 +4105,7 @@ const champion = {
         "full": "Neeko.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 48,
+        "x": 96,
         "y": 96,
         "w": 48,
         "h": 48
@@ -4089,7 +4139,7 @@ const champion = {
       }
     },
     "Nidalee": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Nidalee",
       "key": "76",
       "name": "니달리",
@@ -4105,7 +4155,7 @@ const champion = {
         "full": "Nidalee.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 96,
+        "x": 144,
         "y": 96,
         "w": 48,
         "h": 48
@@ -4116,8 +4166,8 @@ const champion = {
       ],
       "partype": "마나",
       "stats": {
-        "hp": 545,
-        "hpperlevel": 85,
+        "hp": 570,
+        "hpperlevel": 95,
         "mp": 295,
         "mpperlevel": 45,
         "movespeed": 335,
@@ -4139,7 +4189,7 @@ const champion = {
       }
     },
     "Nocturne": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Nocturne",
       "key": "56",
       "name": "녹턴",
@@ -4155,7 +4205,7 @@ const champion = {
         "full": "Nocturne.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 96,
         "w": 48,
         "h": 48
@@ -4189,7 +4239,7 @@ const champion = {
       }
     },
     "Nunu": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Nunu",
       "key": "20",
       "name": "누누와 윌럼프",
@@ -4205,7 +4255,7 @@ const champion = {
         "full": "Nunu.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 96,
         "w": 48,
         "h": 48
@@ -4239,7 +4289,7 @@ const champion = {
       }
     },
     "Olaf": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Olaf",
       "key": "2",
       "name": "올라프",
@@ -4255,7 +4305,7 @@ const champion = {
         "full": "Olaf.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 240,
+        "x": 288,
         "y": 96,
         "w": 48,
         "h": 48
@@ -4289,7 +4339,7 @@ const champion = {
       }
     },
     "Orianna": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Orianna",
       "key": "61",
       "name": "오리아나",
@@ -4305,7 +4355,7 @@ const champion = {
         "full": "Orianna.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 288,
+        "x": 336,
         "y": 96,
         "w": 48,
         "h": 48
@@ -4339,7 +4389,7 @@ const champion = {
       }
     },
     "Ornn": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Ornn",
       "key": "516",
       "name": "오른",
@@ -4355,7 +4405,7 @@ const champion = {
         "full": "Ornn.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 336,
+        "x": 384,
         "y": 96,
         "w": 48,
         "h": 48
@@ -4389,7 +4439,7 @@ const champion = {
       }
     },
     "Pantheon": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Pantheon",
       "key": "80",
       "name": "판테온",
@@ -4405,7 +4455,7 @@ const champion = {
         "full": "Pantheon.png",
         "sprite": "champion2.png",
         "group": "champion",
-        "x": 384,
+        "x": 432,
         "y": 96,
         "w": 48,
         "h": 48
@@ -4439,7 +4489,7 @@ const champion = {
       }
     },
     "Poppy": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Poppy",
       "key": "78",
       "name": "뽀삐",
@@ -4453,10 +4503,10 @@ const champion = {
       },
       "image": {
         "full": "Poppy.png",
-        "sprite": "champion2.png",
+        "sprite": "champion3.png",
         "group": "champion",
-        "x": 432,
-        "y": 96,
+        "x": 0,
+        "y": 0,
         "w": 48,
         "h": 48
       },
@@ -4489,7 +4539,7 @@ const champion = {
       }
     },
     "Pyke": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Pyke",
       "key": "555",
       "name": "파이크",
@@ -4505,7 +4555,7 @@ const champion = {
         "full": "Pyke.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 0,
+        "x": 48,
         "y": 0,
         "w": 48,
         "h": 48
@@ -4539,7 +4589,7 @@ const champion = {
       }
     },
     "Qiyana": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Qiyana",
       "key": "246",
       "name": "키아나",
@@ -4555,7 +4605,7 @@ const champion = {
         "full": "Qiyana.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 48,
+        "x": 96,
         "y": 0,
         "w": 48,
         "h": 48
@@ -4589,7 +4639,7 @@ const champion = {
       }
     },
     "Quinn": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Quinn",
       "key": "133",
       "name": "퀸",
@@ -4605,7 +4655,7 @@ const champion = {
         "full": "Quinn.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 96,
+        "x": 144,
         "y": 0,
         "w": 48,
         "h": 48
@@ -4639,7 +4689,7 @@ const champion = {
       }
     },
     "Rakan": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Rakan",
       "key": "497",
       "name": "라칸",
@@ -4655,7 +4705,7 @@ const champion = {
         "full": "Rakan.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 0,
         "w": 48,
         "h": 48
@@ -4688,7 +4738,7 @@ const champion = {
       }
     },
     "Rammus": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Rammus",
       "key": "33",
       "name": "람머스",
@@ -4704,7 +4754,7 @@ const champion = {
         "full": "Rammus.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 0,
         "w": 48,
         "h": 48
@@ -4738,7 +4788,7 @@ const champion = {
       }
     },
     "RekSai": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "RekSai",
       "key": "421",
       "name": "렉사이",
@@ -4754,7 +4804,7 @@ const champion = {
         "full": "RekSai.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 240,
+        "x": 288,
         "y": 0,
         "w": 48,
         "h": 48
@@ -4787,7 +4837,7 @@ const champion = {
       }
     },
     "Rell": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Rell",
       "key": "526",
       "name": "렐",
@@ -4803,7 +4853,7 @@ const champion = {
         "full": "Rell.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 288,
+        "x": 336,
         "y": 0,
         "w": 48,
         "h": 48
@@ -4836,7 +4886,7 @@ const champion = {
       }
     },
     "Renekton": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Renekton",
       "key": "58",
       "name": "레넥톤",
@@ -4852,7 +4902,7 @@ const champion = {
         "full": "Renekton.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 336,
+        "x": 384,
         "y": 0,
         "w": 48,
         "h": 48
@@ -4886,7 +4936,7 @@ const champion = {
       }
     },
     "Rengar": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Rengar",
       "key": "107",
       "name": "렝가",
@@ -4902,7 +4952,7 @@ const champion = {
         "full": "Rengar.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 384,
+        "x": 432,
         "y": 0,
         "w": 48,
         "h": 48
@@ -4936,7 +4986,7 @@ const champion = {
       }
     },
     "Riven": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Riven",
       "key": "92",
       "name": "리븐",
@@ -4952,8 +5002,8 @@ const champion = {
         "full": "Riven.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 432,
-        "y": 0,
+        "x": 0,
+        "y": 48,
         "w": 48,
         "h": 48
       },
@@ -4986,7 +5036,7 @@ const champion = {
       }
     },
     "Rumble": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Rumble",
       "key": "68",
       "name": "럼블",
@@ -5002,7 +5052,7 @@ const champion = {
         "full": "Rumble.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 0,
+        "x": 48,
         "y": 48,
         "w": 48,
         "h": 48
@@ -5036,7 +5086,7 @@ const champion = {
       }
     },
     "Ryze": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Ryze",
       "key": "13",
       "name": "라이즈",
@@ -5052,7 +5102,7 @@ const champion = {
         "full": "Ryze.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 48,
+        "x": 96,
         "y": 48,
         "w": 48,
         "h": 48
@@ -5086,7 +5136,7 @@ const champion = {
       }
     },
     "Samira": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Samira",
       "key": "360",
       "name": "사미라",
@@ -5102,7 +5152,7 @@ const champion = {
         "full": "Samira.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 96,
+        "x": 144,
         "y": 48,
         "w": 48,
         "h": 48
@@ -5135,7 +5185,7 @@ const champion = {
       }
     },
     "Sejuani": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Sejuani",
       "key": "113",
       "name": "세주아니",
@@ -5151,7 +5201,7 @@ const champion = {
         "full": "Sejuani.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 48,
         "w": 48,
         "h": 48
@@ -5185,7 +5235,7 @@ const champion = {
       }
     },
     "Senna": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Senna",
       "key": "235",
       "name": "세나",
@@ -5201,7 +5251,7 @@ const champion = {
         "full": "Senna.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 48,
         "w": 48,
         "h": 48
@@ -5235,7 +5285,7 @@ const champion = {
       }
     },
     "Seraphine": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Seraphine",
       "key": "147",
       "name": "세라핀",
@@ -5251,7 +5301,7 @@ const champion = {
         "full": "Seraphine.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 240,
+        "x": 288,
         "y": 48,
         "w": 48,
         "h": 48
@@ -5285,7 +5335,7 @@ const champion = {
       }
     },
     "Sett": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Sett",
       "key": "875",
       "name": "세트",
@@ -5301,7 +5351,7 @@ const champion = {
         "full": "Sett.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 288,
+        "x": 336,
         "y": 48,
         "w": 48,
         "h": 48
@@ -5335,7 +5385,7 @@ const champion = {
       }
     },
     "Shaco": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Shaco",
       "key": "35",
       "name": "샤코",
@@ -5351,7 +5401,7 @@ const champion = {
         "full": "Shaco.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 336,
+        "x": 384,
         "y": 48,
         "w": 48,
         "h": 48
@@ -5384,7 +5434,7 @@ const champion = {
       }
     },
     "Shen": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Shen",
       "key": "98",
       "name": "쉔",
@@ -5400,7 +5450,7 @@ const champion = {
         "full": "Shen.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 384,
+        "x": 432,
         "y": 48,
         "w": 48,
         "h": 48
@@ -5433,7 +5483,7 @@ const champion = {
       }
     },
     "Shyvana": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Shyvana",
       "key": "102",
       "name": "쉬바나",
@@ -5449,8 +5499,8 @@ const champion = {
         "full": "Shyvana.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 432,
-        "y": 48,
+        "x": 0,
+        "y": 96,
         "w": 48,
         "h": 48
       },
@@ -5483,7 +5533,7 @@ const champion = {
       }
     },
     "Singed": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Singed",
       "key": "27",
       "name": "신지드",
@@ -5499,7 +5549,7 @@ const champion = {
         "full": "Singed.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 0,
+        "x": 48,
         "y": 96,
         "w": 48,
         "h": 48
@@ -5533,7 +5583,7 @@ const champion = {
       }
     },
     "Sion": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Sion",
       "key": "14",
       "name": "사이온",
@@ -5549,7 +5599,7 @@ const champion = {
         "full": "Sion.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 48,
+        "x": 96,
         "y": 96,
         "w": 48,
         "h": 48
@@ -5583,7 +5633,7 @@ const champion = {
       }
     },
     "Sivir": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Sivir",
       "key": "15",
       "name": "시비르",
@@ -5599,7 +5649,7 @@ const champion = {
         "full": "Sivir.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 96,
+        "x": 144,
         "y": 96,
         "w": 48,
         "h": 48
@@ -5632,7 +5682,7 @@ const champion = {
       }
     },
     "Skarner": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Skarner",
       "key": "72",
       "name": "스카너",
@@ -5648,7 +5698,7 @@ const champion = {
         "full": "Skarner.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 96,
         "w": 48,
         "h": 48
@@ -5682,7 +5732,7 @@ const champion = {
       }
     },
     "Sona": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Sona",
       "key": "37",
       "name": "소나",
@@ -5698,7 +5748,7 @@ const champion = {
         "full": "Sona.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 96,
         "w": 48,
         "h": 48
@@ -5732,7 +5782,7 @@ const champion = {
       }
     },
     "Soraka": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Soraka",
       "key": "16",
       "name": "소라카",
@@ -5748,7 +5798,7 @@ const champion = {
         "full": "Soraka.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 240,
+        "x": 288,
         "y": 96,
         "w": 48,
         "h": 48
@@ -5782,7 +5832,7 @@ const champion = {
       }
     },
     "Swain": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Swain",
       "key": "50",
       "name": "스웨인",
@@ -5798,7 +5848,7 @@ const champion = {
         "full": "Swain.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 288,
+        "x": 336,
         "y": 96,
         "w": 48,
         "h": 48
@@ -5832,7 +5882,7 @@ const champion = {
       }
     },
     "Sylas": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Sylas",
       "key": "517",
       "name": "사일러스",
@@ -5848,7 +5898,7 @@ const champion = {
         "full": "Sylas.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 336,
+        "x": 384,
         "y": 96,
         "w": 48,
         "h": 48
@@ -5882,7 +5932,7 @@ const champion = {
       }
     },
     "Syndra": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Syndra",
       "key": "134",
       "name": "신드라",
@@ -5898,7 +5948,7 @@ const champion = {
         "full": "Syndra.png",
         "sprite": "champion3.png",
         "group": "champion",
-        "x": 384,
+        "x": 432,
         "y": 96,
         "w": 48,
         "h": 48
@@ -5932,7 +5982,7 @@ const champion = {
       }
     },
     "TahmKench": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "TahmKench",
       "key": "223",
       "name": "탐 켄치",
@@ -5946,10 +5996,10 @@ const champion = {
       },
       "image": {
         "full": "TahmKench.png",
-        "sprite": "champion3.png",
+        "sprite": "champion4.png",
         "group": "champion",
-        "x": 432,
-        "y": 96,
+        "x": 0,
+        "y": 0,
         "w": 48,
         "h": 48
       },
@@ -5982,7 +6032,7 @@ const champion = {
       }
     },
     "Taliyah": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Taliyah",
       "key": "163",
       "name": "탈리야",
@@ -5998,7 +6048,7 @@ const champion = {
         "full": "Taliyah.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 0,
+        "x": 48,
         "y": 0,
         "w": 48,
         "h": 48
@@ -6032,7 +6082,7 @@ const champion = {
       }
     },
     "Talon": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Talon",
       "key": "91",
       "name": "탈론",
@@ -6048,7 +6098,7 @@ const champion = {
         "full": "Talon.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 48,
+        "x": 96,
         "y": 0,
         "w": 48,
         "h": 48
@@ -6081,7 +6131,7 @@ const champion = {
       }
     },
     "Taric": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Taric",
       "key": "44",
       "name": "타릭",
@@ -6097,7 +6147,7 @@ const champion = {
         "full": "Taric.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 96,
+        "x": 144,
         "y": 0,
         "w": 48,
         "h": 48
@@ -6131,7 +6181,7 @@ const champion = {
       }
     },
     "Teemo": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Teemo",
       "key": "17",
       "name": "티모",
@@ -6147,7 +6197,7 @@ const champion = {
         "full": "Teemo.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 0,
         "w": 48,
         "h": 48
@@ -6181,7 +6231,7 @@ const champion = {
       }
     },
     "Thresh": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Thresh",
       "key": "412",
       "name": "쓰레쉬",
@@ -6197,7 +6247,7 @@ const champion = {
         "full": "Thresh.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 0,
         "w": 48,
         "h": 48
@@ -6231,7 +6281,7 @@ const champion = {
       }
     },
     "Tristana": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Tristana",
       "key": "18",
       "name": "트리스타나",
@@ -6247,7 +6297,7 @@ const champion = {
         "full": "Tristana.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 240,
+        "x": 288,
         "y": 0,
         "w": 48,
         "h": 48
@@ -6281,7 +6331,7 @@ const champion = {
       }
     },
     "Trundle": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Trundle",
       "key": "48",
       "name": "트런들",
@@ -6297,7 +6347,7 @@ const champion = {
         "full": "Trundle.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 288,
+        "x": 336,
         "y": 0,
         "w": 48,
         "h": 48
@@ -6331,7 +6381,7 @@ const champion = {
       }
     },
     "Tryndamere": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Tryndamere",
       "key": "23",
       "name": "트린다미어",
@@ -6347,7 +6397,7 @@ const champion = {
         "full": "Tryndamere.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 336,
+        "x": 384,
         "y": 0,
         "w": 48,
         "h": 48
@@ -6381,7 +6431,7 @@ const champion = {
       }
     },
     "TwistedFate": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "TwistedFate",
       "key": "4",
       "name": "트위스티드 페이트",
@@ -6397,7 +6447,7 @@ const champion = {
         "full": "TwistedFate.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 384,
+        "x": 432,
         "y": 0,
         "w": 48,
         "h": 48
@@ -6430,7 +6480,7 @@ const champion = {
       }
     },
     "Twitch": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Twitch",
       "key": "29",
       "name": "트위치",
@@ -6446,8 +6496,8 @@ const champion = {
         "full": "Twitch.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 432,
-        "y": 0,
+        "x": 0,
+        "y": 48,
         "w": 48,
         "h": 48
       },
@@ -6480,7 +6530,7 @@ const champion = {
       }
     },
     "Udyr": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Udyr",
       "key": "77",
       "name": "우디르",
@@ -6496,7 +6546,7 @@ const champion = {
         "full": "Udyr.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 0,
+        "x": 48,
         "y": 48,
         "w": 48,
         "h": 48
@@ -6530,7 +6580,7 @@ const champion = {
       }
     },
     "Urgot": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Urgot",
       "key": "6",
       "name": "우르곳",
@@ -6546,7 +6596,7 @@ const champion = {
         "full": "Urgot.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 48,
+        "x": 96,
         "y": 48,
         "w": 48,
         "h": 48
@@ -6580,7 +6630,7 @@ const champion = {
       }
     },
     "Varus": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Varus",
       "key": "110",
       "name": "바루스",
@@ -6596,7 +6646,7 @@ const champion = {
         "full": "Varus.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 96,
+        "x": 144,
         "y": 48,
         "w": 48,
         "h": 48
@@ -6630,7 +6680,7 @@ const champion = {
       }
     },
     "Vayne": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Vayne",
       "key": "67",
       "name": "베인",
@@ -6646,7 +6696,7 @@ const champion = {
         "full": "Vayne.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 48,
         "w": 48,
         "h": 48
@@ -6680,7 +6730,7 @@ const champion = {
       }
     },
     "Veigar": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Veigar",
       "key": "45",
       "name": "베이가",
@@ -6696,7 +6746,7 @@ const champion = {
         "full": "Veigar.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 48,
         "w": 48,
         "h": 48
@@ -6729,7 +6779,7 @@ const champion = {
       }
     },
     "Velkoz": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Velkoz",
       "key": "161",
       "name": "벨코즈",
@@ -6745,7 +6795,7 @@ const champion = {
         "full": "Velkoz.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 240,
+        "x": 288,
         "y": 48,
         "w": 48,
         "h": 48
@@ -6778,7 +6828,7 @@ const champion = {
       }
     },
     "Vi": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Vi",
       "key": "254",
       "name": "바이",
@@ -6794,7 +6844,7 @@ const champion = {
         "full": "Vi.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 288,
+        "x": 336,
         "y": 48,
         "w": 48,
         "h": 48
@@ -6828,7 +6878,7 @@ const champion = {
       }
     },
     "Viego": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Viego",
       "key": "234",
       "name": "비에고",
@@ -6844,7 +6894,7 @@ const champion = {
         "full": "Viego.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 336,
+        "x": 384,
         "y": 48,
         "w": 48,
         "h": 48
@@ -6878,7 +6928,7 @@ const champion = {
       }
     },
     "Viktor": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Viktor",
       "key": "112",
       "name": "빅토르",
@@ -6894,7 +6944,7 @@ const champion = {
         "full": "Viktor.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 384,
+        "x": 432,
         "y": 48,
         "w": 48,
         "h": 48
@@ -6927,7 +6977,7 @@ const champion = {
       }
     },
     "Vladimir": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Vladimir",
       "key": "8",
       "name": "블라디미르",
@@ -6943,8 +6993,8 @@ const champion = {
         "full": "Vladimir.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 432,
-        "y": 48,
+        "x": 0,
+        "y": 96,
         "w": 48,
         "h": 48
       },
@@ -6976,7 +7026,7 @@ const champion = {
       }
     },
     "Volibear": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Volibear",
       "key": "106",
       "name": "볼리베어",
@@ -6992,7 +7042,7 @@ const champion = {
         "full": "Volibear.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 0,
+        "x": 48,
         "y": 96,
         "w": 48,
         "h": 48
@@ -7026,7 +7076,7 @@ const champion = {
       }
     },
     "Warwick": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Warwick",
       "key": "19",
       "name": "워윅",
@@ -7042,7 +7092,7 @@ const champion = {
         "full": "Warwick.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 48,
+        "x": 96,
         "y": 96,
         "w": 48,
         "h": 48
@@ -7076,7 +7126,7 @@ const champion = {
       }
     },
     "Xayah": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Xayah",
       "key": "498",
       "name": "자야",
@@ -7092,7 +7142,7 @@ const champion = {
         "full": "Xayah.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 96,
+        "x": 144,
         "y": 96,
         "w": 48,
         "h": 48
@@ -7125,7 +7175,7 @@ const champion = {
       }
     },
     "Xerath": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Xerath",
       "key": "101",
       "name": "제라스",
@@ -7141,7 +7191,7 @@ const champion = {
         "full": "Xerath.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 96,
         "w": 48,
         "h": 48
@@ -7174,7 +7224,7 @@ const champion = {
       }
     },
     "XinZhao": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "XinZhao",
       "key": "5",
       "name": "신 짜오",
@@ -7190,7 +7240,7 @@ const champion = {
         "full": "XinZhao.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 96,
         "w": 48,
         "h": 48
@@ -7224,7 +7274,7 @@ const champion = {
       }
     },
     "Yasuo": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Yasuo",
       "key": "157",
       "name": "야스오",
@@ -7240,7 +7290,7 @@ const champion = {
         "full": "Yasuo.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 240,
+        "x": 288,
         "y": 96,
         "w": 48,
         "h": 48
@@ -7274,7 +7324,7 @@ const champion = {
       }
     },
     "Yone": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Yone",
       "key": "777",
       "name": "요네",
@@ -7290,7 +7340,7 @@ const champion = {
         "full": "Yone.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 288,
+        "x": 336,
         "y": 96,
         "w": 48,
         "h": 48
@@ -7324,7 +7374,7 @@ const champion = {
       }
     },
     "Yorick": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Yorick",
       "key": "83",
       "name": "요릭",
@@ -7340,7 +7390,7 @@ const champion = {
         "full": "Yorick.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 336,
+        "x": 384,
         "y": 96,
         "w": 48,
         "h": 48
@@ -7374,7 +7424,7 @@ const champion = {
       }
     },
     "Yuumi": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Yuumi",
       "key": "350",
       "name": "유미",
@@ -7390,7 +7440,7 @@ const champion = {
         "full": "Yuumi.png",
         "sprite": "champion4.png",
         "group": "champion",
-        "x": 384,
+        "x": 432,
         "y": 96,
         "w": 48,
         "h": 48
@@ -7424,7 +7474,7 @@ const champion = {
       }
     },
     "Zac": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Zac",
       "key": "154",
       "name": "자크",
@@ -7438,10 +7488,10 @@ const champion = {
       },
       "image": {
         "full": "Zac.png",
-        "sprite": "champion4.png",
+        "sprite": "champion5.png",
         "group": "champion",
-        "x": 432,
-        "y": 96,
+        "x": 0,
+        "y": 0,
         "w": 48,
         "h": 48
       },
@@ -7474,7 +7524,7 @@ const champion = {
       }
     },
     "Zed": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Zed",
       "key": "238",
       "name": "제드",
@@ -7490,7 +7540,7 @@ const champion = {
         "full": "Zed.png",
         "sprite": "champion5.png",
         "group": "champion",
-        "x": 0,
+        "x": 48,
         "y": 0,
         "w": 48,
         "h": 48
@@ -7523,7 +7573,7 @@ const champion = {
       }
     },
     "Ziggs": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Ziggs",
       "key": "115",
       "name": "직스",
@@ -7539,7 +7589,7 @@ const champion = {
         "full": "Ziggs.png",
         "sprite": "champion5.png",
         "group": "champion",
-        "x": 48,
+        "x": 96,
         "y": 0,
         "w": 48,
         "h": 48
@@ -7572,7 +7622,7 @@ const champion = {
       }
     },
     "Zilean": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Zilean",
       "key": "26",
       "name": "질리언",
@@ -7588,7 +7638,7 @@ const champion = {
         "full": "Zilean.png",
         "sprite": "champion5.png",
         "group": "champion",
-        "x": 96,
+        "x": 144,
         "y": 0,
         "w": 48,
         "h": 48
@@ -7622,7 +7672,7 @@ const champion = {
       }
     },
     "Zoe": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Zoe",
       "key": "142",
       "name": "조이",
@@ -7638,7 +7688,7 @@ const champion = {
         "full": "Zoe.png",
         "sprite": "champion5.png",
         "group": "champion",
-        "x": 144,
+        "x": 192,
         "y": 0,
         "w": 48,
         "h": 48
@@ -7672,7 +7722,7 @@ const champion = {
       }
     },
     "Zyra": {
-      "version": "11.14.1",
+      "version": "11.15.1",
       "id": "Zyra",
       "key": "143",
       "name": "자이라",
@@ -7688,7 +7738,7 @@ const champion = {
         "full": "Zyra.png",
         "sprite": "champion5.png",
         "group": "champion",
-        "x": 192,
+        "x": 240,
         "y": 0,
         "w": 48,
         "h": 48
@@ -7719,9 +7769,9 @@ const champion = {
         "attackdamageperlevel": 3.2,
         "attackspeedperlevel": 2.11,
         "attackspeed": 0.625
-      }
-    }
-  }
+      },
+    },
+  },
 };
 
 export default champion.data;
