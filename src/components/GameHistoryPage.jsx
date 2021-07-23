@@ -1,12 +1,32 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import styled from '@emotion/styled';
+import ReactLoading from 'react-loading';
 
 import PlayerInfoContainer from './player/PlayerInfoContainer';
 import GameListContainer from './games/GameListContainer';
+import { setIsLoading } from '../reducers/player/slice';
+
+const LoadingContainer = styled.div({
+  display: 'flex',
+  position: 'relative',
+  alignItems: 'center',
+  justifyContent: 'center',
+  paddingTop: '25em',
+});
 
 function GameHistoryPage() {
-  const { status } = useSelector((state) => ({
+  const dispatch = useDispatch();
+
+  const { name, status, isLoading } = useSelector((state) => ({
+    name: state.player.summoner.name,
     status: state.player.summoner.status,
+    isLoading: state.player.isLoading,
   }));
+
+  useEffect(() => {
+    setTimeout(() => dispatch(setIsLoading(false)), 1500);
+  }, [name]);
 
   if (status) {
     const statusCode = status.status_code;
@@ -18,11 +38,19 @@ function GameHistoryPage() {
   }
 
   return (
-    <>
-      <PlayerInfoContainer />
-      <br />
-      <GameListContainer />
-    </>
+    isLoading
+      ? (
+        <LoadingContainer>
+          <ReactLoading type="spin" color="#5383e8" />
+        </LoadingContainer>
+      )
+      : (
+        <>
+          <PlayerInfoContainer />
+          <br />
+          <GameListContainer />
+        </>
+      )
   );
 }
 

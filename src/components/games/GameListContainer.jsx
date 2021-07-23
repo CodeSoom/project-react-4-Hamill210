@@ -9,9 +9,6 @@ export default function GameListContainer() {
   }));
 
   return (
-    <GameList
-      gameInfos={gameInfos}
-      summonerName={name}
-    />
+    <GameList gameInfos={gameInfos} summonerName={name} />
   );
 }
