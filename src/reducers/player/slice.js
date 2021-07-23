@@ -19,6 +19,7 @@ const { actions, reducer } = createSlice({
     summoner: {},
     soloRank: {},
     subRank: {},
+    isLoading: false,
   },
   reducers: {
     setPlayerName(state, { payload: userName }) {
@@ -53,6 +54,12 @@ const { actions, reducer } = createSlice({
         subRank,
       };
     },
+    setIsLoading(state, { payload: isLoading }) {
+      return {
+        ...state,
+        isLoading,
+      };
+    },
   },
 });
 
@@ -61,6 +68,7 @@ export const {
   initPlayerName,
   setSummoner,
   setRanks,
+  setIsLoading,
 } = actions;
 
 export function loadSummoners(username) {
