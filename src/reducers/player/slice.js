@@ -68,7 +68,7 @@ export function loadSummoners(username) {
     const summoner = await fetchSummoners(username);
     dispatch(setSummoner(summoner));
 
-    if (summoner) {
+    if (!summoner.status) {
       const ranks = await fetchRanks(summoner.id);
       dispatch(setRanks(ranks));
 
