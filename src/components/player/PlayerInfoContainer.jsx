@@ -1,6 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { initPlayerName, loadSummoners } from '../../reducers/player/slice';
+import {
+  initPlayerName,
+  loadSummoners,
+  setIsLoading,
+} from '../../reducers/player/slice';
 import { clearInfos } from '../../reducers/games/slice';
 
 import PlayerInfo from './PlayerInfo';
@@ -19,6 +23,7 @@ export default function PlayerInfoContainer() {
   }));
 
   const handleClickUpdateUserInfo = (summonerName) => {
+    dispatch(setIsLoading(true));
     dispatch(loadSummoners(summonerName));
     dispatch(initPlayerName());
     dispatch(clearInfos());
