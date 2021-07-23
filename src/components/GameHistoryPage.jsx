@@ -18,15 +18,14 @@ const LoadingContainer = styled.div({
 function GameHistoryPage() {
   const dispatch = useDispatch();
 
-  const { name, status, isLoading } = useSelector((state) => ({
-    name: state.player.summoner.name,
+  const { status, isLoading } = useSelector((state) => ({
     status: state.player.summoner.status,
     isLoading: state.player.isLoading,
   }));
 
   useEffect(() => {
     setTimeout(() => dispatch(setIsLoading(false)), 1500);
-  }, [name]);
+  }, [isLoading]);
 
   if (status) {
     const statusCode = status.status_code;

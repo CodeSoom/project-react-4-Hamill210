@@ -57,7 +57,9 @@ function GamePlayerStatsInfo({
       <KillConcernDiv>
         킬관여
         {' '}
-        {(((kills + assists) / totalKill) * 100).toFixed(0)}
+        {(kills + assists) > 0 && totalKill > 0
+          ? (((kills + assists) / totalKill) * 100).toFixed(0)
+          : '0'}
         %
       </KillConcernDiv>
     </StatsWrap>

@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import styled from '@emotion/styled';
-import { BLUE_BACKGROUND_COLOR, RED_BACKGROUND_COLOR } from '../../styles/colors';
+import { BLUE_BACKGROUND_COLOR, DRAW_BACKGROUND_COLOR, RED_BACKGROUND_COLOR } from '../../styles/colors';
 
 const InventoryWrap = styled.div({
   display: 'grid',
@@ -16,16 +16,29 @@ const ItemListDiv = styled.div({
   margin: '0 auto',
 });
 
-const ItemDiv = styled.div(({ isWin }) => ({
-  display: 'inline-block',
-  width: '28px',
-  height: '28px',
-  borderRadius: '3px',
-  marginTop: '2px',
-  marginRight: '2px',
-  overflow: 'hidden',
-  backgroundColor: isWin ? BLUE_BACKGROUND_COLOR.item : RED_BACKGROUND_COLOR.item,
-}));
+const ItemDiv = styled.div(({ isWin, isDraw }) => {
+  const commonStyles = {
+    display: 'inline-block',
+    width: '28px',
+    height: '28px',
+    borderRadius: '3px',
+    marginTop: '2px',
+    marginRight: '2px',
+    overflow: 'hidden',
+  };
+
+  if (isDraw) {
+    return {
+      ...commonStyles,
+      backgroundColor: DRAW_BACKGROUND_COLOR.item,
+    };
+  }
+
+  return {
+    ...commonStyles,
+    backgroundColor: isWin ? BLUE_BACKGROUND_COLOR.item : RED_BACKGROUND_COLOR.item,
+  };
+});
 
 const ItemImg = styled.img({
   width: '100%',
@@ -66,7 +79,7 @@ const TrinketImg = styled.img({
   verticalAlign: 'bottom',
 });
 
-function GamePlayerInventory({ isWin, stats }) {
+function GamePlayerInventory({ isWin, isDraw, stats }) {
   const {
     item0, item1, item2, item3, item4, item5, item6,
     visionWardsBoughtInGame,
@@ -80,7 +93,7 @@ function GamePlayerInventory({ isWin, stats }) {
           const key = `item-${item}-${index}`;
 
           return (
-            <ItemDiv key={key} isWin={isWin}>
+            <ItemDiv key={key} isWin={isWin} isDraw={isDraw}>
               {item
                 ? <ItemImg src={`https://ddragon.leagueoflegends.com/cdn/11.14.1/img/item/${item}.png`} alt={`ItemId-${item}`} />
                 : <NoItemDiv />}

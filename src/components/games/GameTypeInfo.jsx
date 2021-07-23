@@ -9,7 +9,7 @@ import {
 } from '../../constant';
 import {
   BLUE_BACKGROUND_COLOR,
-  BLUE_FONT_COLOR,
+  BLUE_FONT_COLOR, DRAW_BACKGROUND_COLOR, DRAW_FONT_COLOR,
   RED_BACKGROUND_COLOR,
   RED_FONT_COLOR,
 } from '../../styles/colors';
@@ -39,21 +39,47 @@ const GamePlayTimeWrap = styled.div({
   cursor: 'help',
 });
 
-const Bar = styled.div(({ isWin }) => ({
-  display: 'block',
-  width: '27px',
-  height: '2px',
-  margin: '5px auto',
-  background: isWin ? BLUE_BACKGROUND_COLOR.bar : RED_BACKGROUND_COLOR.bar,
-}));
+const Bar = styled.div(({ isWin, isDraw }) => {
+  const commonStyles = {
+    display: 'block',
+    width: '27px',
+    height: '2px',
+    margin: '5px auto',
+  };
 
-const WinLoseWrap = styled.div(({ isWin }) => ({
-  fontWeight: 'bold',
-  color: isWin ? BLUE_FONT_COLOR : RED_FONT_COLOR,
-}));
+  if (isDraw) {
+    return {
+      ...commonStyles,
+      background: DRAW_BACKGROUND_COLOR.bar,
+    };
+  }
+
+  return {
+    ...commonStyles,
+    background: isWin ? BLUE_BACKGROUND_COLOR.bar : RED_BACKGROUND_COLOR.bar,
+  };
+});
+
+const WinLoseWrap = styled.div(({ isWin, isDraw }) => {
+  const commonStyles = {
+    fontWeight: 'bold',
+  };
+
+  if (isDraw) {
+    return {
+      ...commonStyles,
+      color: DRAW_FONT_COLOR,
+    };
+  }
+
+  return {
+    ...commonStyles,
+    color: isWin ? BLUE_FONT_COLOR : RED_FONT_COLOR,
+  };
+});
 
 function GameTypeInfo({
-  queueId, gameCreation, gameTime, win, isWin,
+  queueId, gameCreation, gameTime, win, isWin, isDraw,
 }) {
   const now = new Date().getTime();
   const gamePlayTime = `${new Date(gameTime).getMinutes()}분 ${new Date(gameTime).getSeconds()}초`;
@@ -68,9 +94,9 @@ function GameTypeInfo({
           {getFormattedTimeDifference(now - (gameCreation + gameTime))}
         </GamePlayTimeWrap>
       </div>
-      <Bar isWin={isWin} />
-      <WinLoseWrap isWin={isWin}>
-        {VICTORY_OR_DEFEAT[win]}
+      <Bar isWin={isWin} isDraw={isDraw} />
+      <WinLoseWrap isWin={isWin} isDraw={isDraw}>
+        {isDraw ? '다시하기' : VICTORY_OR_DEFEAT[win]}
       </WinLoseWrap>
       <div>
         {gamePlayTime}
