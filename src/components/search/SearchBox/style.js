@@ -6,6 +6,8 @@ export const Div = {
     position: 'relative',
     height: '32px',
     borderRadius: '4px',
+    float: 'right',
+    paddingTop: '29px',
   }),
   CountryContent: styled.div({
     display: 'flex',
@@ -42,10 +44,9 @@ export const Input = {
 export const Button = {
   SearchBtn: styled.button({
     position: 'absolute',
-    top: 0,
     right: 0,
     width: '54px',
-    height: '100%',
+    height: '50%',
     textAlign: 'center',
     background: '#fff',
     border: 'none',

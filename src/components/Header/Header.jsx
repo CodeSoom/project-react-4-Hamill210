@@ -5,10 +5,12 @@ import SearchBoxContainer from '../search/SearchBoxContainer';
 function Header() {
   return (
     <Styled.Div.Container>
-      <div>
-        <a href="/">SOOM.GG</a>
-      </div>
-      <SearchBoxContainer />
+      <Styled.Div.Content>
+        <Styled.Div.HeaderContent>
+          <a href="/">SOOM.GG</a>
+        </Styled.Div.HeaderContent>
+        <SearchBoxContainer />
+      </Styled.Div.Content>
     </Styled.Div.Container>
   );
 }
