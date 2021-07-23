@@ -46,6 +46,18 @@ const KDARatioSpan = styled.span({
 function GamePlayerKDAInfo({ stats }) {
   const { kills, deaths, assists } = stats;
 
+  function getKillPercentOfRelation(kill, death, assist) {
+    if (death > 0) {
+      return `${((kill + assist) / death).toFixed(2)}:1`;
+    }
+
+    if (kill > 0 || assists > 0) {
+      return 'Perfect';
+    }
+
+    return '0.00:1';
+  }
+
   return (
     <KDAWrap>
       <KDADiv>
@@ -57,8 +69,7 @@ function GamePlayerKDAInfo({ stats }) {
       </KDADiv>
       <KDARatio>
         <KDARatioSpan>
-          {((kills + assists) / deaths).toFixed(2)}
-          :1
+          {getKillPercentOfRelation(kills, deaths, assists)}
         </KDARatioSpan>
         {' 평점 '}
       </KDARatio>
