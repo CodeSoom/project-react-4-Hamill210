@@ -39,3 +39,5 @@ export const SELECTED_TEAM = {
 
 export const BLUE_TEAM_PLAYER_IDS = [1, 2, 3, 4, 5];
 export const RED_TEAM_PLAYER_IDS = [6, 7, 8, 9, 10];
+
+export const SURRENDER_TIME = 900;

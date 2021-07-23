@@ -2,7 +2,7 @@ import { memo } from 'react';
 import styled from '@emotion/styled';
 
 import {
-  SELECTED_TEAM,
+  SELECTED_TEAM, SURRENDER_TIME,
 } from '../../constant';
 
 import GameTypeInfo from './GameTypeInfo';
@@ -13,7 +13,7 @@ import GamePlayerInventory from './GamePlayerInventory';
 import GamePlayers from './GamePlayers';
 import {
   BLUE_BACKGROUND_COLOR,
-  BLUE_BORDER_COLOR,
+  BLUE_BORDER_COLOR, DRAW_BACKGROUND_COLOR, DRAW_BORDER_COLOR,
   RED_BACKGROUND_COLOR,
   RED_BORDER_COLOR,
 } from '../../styles/colors';
@@ -30,15 +30,29 @@ const GameItemWrap = styled.div({
   marginBottom: '10px',
 });
 
-const GameItemDiv = styled.div(({ isWin }) => ({
-  display: 'grid',
-  gridTemplateColumns: '100px 174px 120px 120px 150px 274px',
-  border: '1px solid #cdd2d2',
-  borderCollapse: 'collapse',
-  width: '100%',
-  backgroundColor: isWin ? BLUE_BACKGROUND_COLOR.container : RED_BACKGROUND_COLOR.container,
-  borderColor: isWin ? BLUE_BORDER_COLOR : RED_BORDER_COLOR,
-}));
+const GameItemDiv = styled.div(({ isWin, isDraw }) => {
+  const commonStyles = {
+    display: 'grid',
+    gridTemplateColumns: '100px 174px 120px 120px 150px 274px',
+    border: '1px solid #cdd2d2',
+    borderCollapse: 'collapse',
+    width: '100%',
+  };
+
+  if (isDraw) {
+    return {
+      ...commonStyles,
+      backgroundColor: DRAW_BACKGROUND_COLOR.container,
+      borderColor: DRAW_BORDER_COLOR,
+    };
+  }
+
+  return {
+    ...commonStyles,
+    backgroundColor: isWin ? BLUE_BACKGROUND_COLOR.container : RED_BACKGROUND_COLOR.container,
+    borderColor: isWin ? BLUE_BORDER_COLOR : RED_BORDER_COLOR,
+  };
+});
 
 function GameList({ gameInfos, summonerName }) {
   if (gameInfos.length === 0) {
@@ -59,6 +73,7 @@ function GameList({ gameInfos, summonerName }) {
 
           const team = teams[SELECTED_TEAM[participantOfSummoner.teamId]];
           const isWin = team.win === 'Win';
+          const isDraw = gameDuration < SURRENDER_TIME;
 
           const { championId, spell1Id, spell2Id } = participantOfSummoner;
           const {
@@ -67,13 +82,14 @@ function GameList({ gameInfos, summonerName }) {
 
           return (
             <GameItemWrap key={gameId}>
-              <GameItemDiv isWin={isWin}>
+              <GameItemDiv isWin={isWin} isDraw={isDraw}>
                 <GameTypeInfo
                   gameCreation={gameCreation}
                   gameTime={gameTime}
                   queueId={queueId}
                   win={team.win}
                   isWin={isWin}
+                  isDraw={isDraw}
                 />
                 <GamePlayerProfileInfo
                   championId={championId}
@@ -94,6 +110,7 @@ function GameList({ gameInfos, summonerName }) {
                 />
                 <GamePlayerInventory
                   isWin={isWin}
+                  isDraw={isDraw}
                   stats={participantOfSummoner.stats}
                 />
                 <GamePlayers
