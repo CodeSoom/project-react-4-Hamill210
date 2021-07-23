@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
 
 import Header from './components/Header';
-import PlayerInfoContainer from './components/player/PlayerInfoContainer';
-import GameListContainer from './components/games/GameListContainer';
+import GameHistoryPage from './components/GameHistoryPage';
 
 const Wrapper = styled.div({
   minHeight: '100%',
@@ -19,9 +18,7 @@ function App() {
     <Wrapper>
       <Header />
       <Content>
-        <PlayerInfoContainer />
-        <br />
-        <GameListContainer />
+        <GameHistoryPage />
       </Content>
     </Wrapper>
   );
