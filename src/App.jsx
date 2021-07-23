@@ -11,6 +11,7 @@ const Wrapper = styled.div({
 const Content = styled.div({
   width: '1000px',
   margin: 'auto',
+  paddingTop: '5em',
 });
 
 function App() {

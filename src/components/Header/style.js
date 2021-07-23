@@ -2,21 +2,31 @@ import styled from '@emotion/styled';
 
 export const Div = {
   Container: styled.div({
-    display: 'grid',
-    gridTemplateColumns: 'auto 350px',
-    backgroundColor: '#5383e8',
-    padding: '20px 40px 20px 40px',
-    alignItems: 'center',
+    zIndex: '100',
+    position: 'fixed',
+    top: '0',
+    left: '0',
+    width: '100%',
+    minHeight: '3.5em',
+    background: '#5383e8',
     a: {
       fontSize: '1.8em',
       fontWeight: 'bold',
-      display: 'block',
       margin: '1em 0',
       float: 'left',
       textAlign: 'center',
       color: '#FFF',
       textDecoration: 'none',
     },
+  }),
+  Content: styled.div({
+    margin: '0 auto',
+    width: '90%',
+    maxWidth: '900px',
+  }),
+  HeaderContent: styled.div({
+    float: 'left',
+    display: 'flex',
   }),
 };
 
